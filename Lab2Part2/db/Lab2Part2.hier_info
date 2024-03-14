@@ -1,0 +1,238 @@
+|csa8
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+a[4] => a[4].IN2
+a[5] => a[5].IN2
+a[6] => a[6].IN2
+a[7] => a[7].IN2
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+b[4] => b[4].IN2
+b[5] => b[5].IN2
+b[6] => b[6].IN2
+b[7] => b[7].IN2
+cin => cin.IN1
+cout << mux_2to1:mux.y
+sum[0] << rca4:rca0.sum
+sum[1] << rca4:rca0.sum
+sum[2] << rca4:rca0.sum
+sum[3] << rca4:rca0.sum
+sum[4] << mux4_2to1:muxb.y
+sum[5] << mux4_2to1:muxb.y
+sum[6] << mux4_2to1:muxb.y
+sum[7] << mux4_2to1:muxb.y
+
+
+|csa8|rca4:rca0
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+cout <= fa:fa3.cout
+sum[0] <= fa:fa0.sum
+sum[1] <= fa:fa1.sum
+sum[2] <= fa:fa2.sum
+sum[3] <= fa:fa3.sum
+
+
+|csa8|rca4:rca0|fa:fa0
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca0|fa:fa1
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca0|fa:fa2
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca0|fa:fa3
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca1
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+cout <= fa:fa3.cout
+sum[0] <= fa:fa0.sum
+sum[1] <= fa:fa1.sum
+sum[2] <= fa:fa2.sum
+sum[3] <= fa:fa3.sum
+
+
+|csa8|rca4:rca1|fa:fa0
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca1|fa:fa1
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca1|fa:fa2
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca1|fa:fa3
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca2
+a[0] => a[0].IN1
+a[1] => a[1].IN1
+a[2] => a[2].IN1
+a[3] => a[3].IN1
+b[0] => b[0].IN1
+b[1] => b[1].IN1
+b[2] => b[2].IN1
+b[3] => b[3].IN1
+cin => cin.IN1
+cout <= fa:fa3.cout
+sum[0] <= fa:fa0.sum
+sum[1] <= fa:fa1.sum
+sum[2] <= fa:fa2.sum
+sum[3] <= fa:fa3.sum
+
+
+|csa8|rca4:rca2|fa:fa0
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca2|fa:fa1
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca2|fa:fa2
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|rca4:rca2|fa:fa3
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|mux_2to1:mux
+s => y.OUTPUTSELECT
+d0 => y.DATAA
+d1 => y.DATAB
+y <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|csa8|mux4_2to1:muxb
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+s => y.OUTPUTSELECT
+d0[0] => y.DATAA
+d0[1] => y.DATAA
+d0[2] => y.DATAA
+d0[3] => y.DATAA
+d1[0] => y.DATAB
+d1[1] => y.DATAB
+d1[2] => y.DATAB
+d1[3] => y.DATAB
+y[0] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[1] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[2] <= y.DB_MAX_OUTPUT_PORT_TYPE
+y[3] <= y.DB_MAX_OUTPUT_PORT_TYPE
+
+
