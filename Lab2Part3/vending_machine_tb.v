@@ -30,7 +30,7 @@ initial begin
       {FIVE,TWO,ONE} = 0; #10;
       {FIVE,TWO,ONE} = 4; #10;
   end
-$finish;
+$stop; // End RTL simulation without exiting
 end
 
 endmodule

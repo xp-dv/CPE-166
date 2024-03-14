@@ -12,7 +12,7 @@ initial begin
   for (i = 0; i < 64; i = i + 1) begin
     {x,y} = i; #5;
   end
-$finish;
+$stop; // End RTL simulation without exiting
 end
 	
 endmodule

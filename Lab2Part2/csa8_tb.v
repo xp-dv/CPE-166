@@ -16,7 +16,7 @@ initial begin
     {a,b,cin} = i;
     #5;
   end
- $finish;
+$stop; // End RTL simulation without exiting
 end
 
 endmodule
