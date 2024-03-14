@@ -1,0 +1,87 @@
+|multiplier3
+x[0] => comb.IN0
+x[0] => comb.IN0
+x[0] => comb.IN0
+x[1] => comb.IN0
+x[1] => comb.IN0
+x[1] => comb.IN0
+x[2] => comb.IN0
+x[2] => comb.IN0
+x[2] => comb.IN0
+y[0] => comb.IN1
+y[0] => comb.IN1
+y[0] => comb.IN1
+y[1] => comb.IN1
+y[1] => comb.IN1
+y[1] => comb.IN1
+y[2] => comb.IN1
+y[2] => comb.IN1
+y[2] => comb.IN1
+p[0] << comb.DB_MAX_OUTPUT_PORT_TYPE
+p[1] << ha:ha1.sum
+p[2] << ha:ha3.sum
+p[3] << fa:fa2.sum
+p[4] << fa:fa3.sum
+p[5] << fa:fa3.cout
+
+
+|multiplier3|ha:ha1
+a => cout.IN0
+a => sum.IN0
+b => cout.IN1
+b => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier3|ha:ha2
+a => cout.IN0
+a => sum.IN0
+b => cout.IN1
+b => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier3|ha:ha3
+a => cout.IN0
+a => sum.IN0
+b => cout.IN1
+b => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier3|fa:fa1
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier3|fa:fa2
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|multiplier3|fa:fa3
+a => cout.IN0
+a => cout.IN0
+b => cout.IN1
+b => cout.IN1
+cin => cout.IN1
+cin => sum.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+sum <= sum.DB_MAX_OUTPUT_PORT_TYPE
+
+
