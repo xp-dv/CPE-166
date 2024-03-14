@@ -1,0 +1,1 @@
+Warning (10268): Verilog HDL information at bin12_7seg3_decoder_anode.v(43): always construct contains both blocking and non-blocking assignments File: C:/Users/XP/Documents/CPE 166/Projects/bin12_7seg3_decoder_anode/bin12_7seg3_decoder_anode.v Line: 43
