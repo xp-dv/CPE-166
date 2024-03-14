@@ -1,0 +1,16 @@
+|hex_7seg_decoder_anode
+dp => seg_out[7].DATAIN
+hex_in[0] => Decoder0.IN3
+hex_in[1] => Decoder0.IN2
+hex_in[2] => Decoder0.IN1
+hex_in[3] => Decoder0.IN0
+seg_out[0] <= WideOr6.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[1] <= WideOr5.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[2] <= WideOr4.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[3] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[4] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[5] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[6] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+seg_out[7] <= dp.DB_MAX_OUTPUT_PORT_TYPE
+
+
