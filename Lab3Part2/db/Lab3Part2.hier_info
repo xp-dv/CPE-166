@@ -1,0 +1,21 @@
+|hamming7_4
+d7 => par_bit.IN0
+d7 => par_bit.IN0
+d7 => dout[7].DATAIN
+d6 => par_bit.IN1
+d6 => dout[6].DATAIN
+d5 => par_bit.IN1
+d5 => par_bit.IN1
+d5 => dout[5].DATAIN
+d3 => par_bit.IN1
+d3 => par_bit.IN1
+d3 => dout[3].DATAIN
+dout[1] <= par_bit.DB_MAX_OUTPUT_PORT_TYPE
+dout[2] <= par_bit.DB_MAX_OUTPUT_PORT_TYPE
+dout[3] <= d3.DB_MAX_OUTPUT_PORT_TYPE
+dout[4] <= par_bit.DB_MAX_OUTPUT_PORT_TYPE
+dout[5] <= d5.DB_MAX_OUTPUT_PORT_TYPE
+dout[6] <= d6.DB_MAX_OUTPUT_PORT_TYPE
+dout[7] <= d7.DB_MAX_OUTPUT_PORT_TYPE
+
+
