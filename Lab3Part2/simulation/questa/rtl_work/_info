@@ -1,0 +1,153 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/simulation/questa
+T_opt
+!s110 1710496636
+Vb1?jKz3jFK:T;GhTNhEzU1
+04 13 6 work hamming7_4_tb behave 1
+=1-000c29281189-65f41b7c-1af-11b0
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ehamming7_4
+Z2 w1710493458
+Z3 DPx4 work 11 parity_pack 0 22 :Ibd5]lz;LGdJ2`Tif`T]2
+Z4 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z5 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 1
+R1
+Z6 8C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4.vhd
+Z7 FC:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4.vhd
+l0
+L9 1
+VI55`lTOX<Mo^b<YJD>Rz02
+!s100 7eA@PiX:56M@BdHk`o1G90
+Z8 OL;C;2023.3;77
+31
+Z9 !s110 1710496635
+!i10b 1
+Z10 !s108 1710496635.000000
+Z11 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4.vhd|
+Z12 !s107 C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4.vhd|
+!i113 0
+Z13 o-93 -work work
+Z14 tExplicit 1 CvgOpt 0
+Ahamming7_4_arch
+R3
+R4
+R5
+Z15 DEx4 work 10 hamming7_4 0 22 I55`lTOX<Mo^b<YJD>Rz02
+!i122 1
+l24
+L20 11
+VYfE[6DM?NC1j<l;dSAm2R0
+!s100 HQ4W5@mk4Zm7=b<84cZgZ1
+R8
+31
+R9
+!i10b 1
+R10
+R11
+R12
+!i113 0
+R13
+R14
+Ehamming7_4_tb
+Z16 w1710496157
+R4
+R5
+!i122 2
+R1
+Z17 8C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4_tb.vhd
+Z18 FC:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4_tb.vhd
+l0
+L7 1
+VgCgODaQ[_ITiAYXm[S:ZK1
+!s100 R8]oH`OT@ZEFjU7>T@3dc0
+R8
+31
+R9
+!i10b 1
+R10
+Z19 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4_tb.vhd|
+Z20 !s107 C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/hamming7_4_tb.vhd|
+!i113 0
+R13
+R14
+Abehave
+R3
+R15
+R4
+R5
+DEx4 work 13 hamming7_4_tb 0 22 gCgODaQ[_ITiAYXm[S:ZK1
+!i122 2
+l19
+L11 41
+V97eV942;nJ4HgFiRjATz20
+!s100 hK?>::lIa;[G_@>FTzR?22
+R8
+31
+R9
+!i10b 1
+R10
+R19
+R20
+!i113 0
+R13
+R14
+Pparity_pack
+R4
+R5
+!i122 0
+Z21 w1710496576
+R1
+Z22 8C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/parity_pack.vhd
+Z23 FC:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/parity_pack.vhd
+l0
+L7 4
+V:Ibd5]lz;LGdJ2`Tif`T]2
+!s100 ^h7?X5B4FYzD>S`lFz<Ef2
+R8
+31
+b1
+R9
+!i10b 1
+R10
+Z24 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/parity_pack.vhd|
+Z25 !s107 C:/Users/XP/Documents/CPE 166/Projects/Lab3Part2/parity_pack.vhd|
+!i113 0
+R13
+R14
+Bbody
+R3
+R4
+R5
+!i122 0
+l0
+L13 15
+V8RHzB3R20bAnbK324n9]o0
+!s100 L2`0HcPz1:3VA[fc5zC>]3
+R8
+31
+R9
+!i10b 1
+R10
+R24
+R25
+!i113 0
+R13
+R14
