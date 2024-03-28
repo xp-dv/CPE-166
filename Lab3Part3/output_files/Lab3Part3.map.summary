@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Thu Mar 28 02:44:24 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Lab3Part3
+Top-level Entity Name : asm
+Family : MAX 10
+Total logic elements : 5
+    Total combinational functions : 5
+    Dedicated logic registers : 2
+Total registers : 2
+Total pins : 10
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

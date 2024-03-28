@@ -1,0 +1,108 @@
+m255
+K4
+z2
+!s12c _opt
+Z0 !s99 nomlopt
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z1 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/simulation/questa
+T_opt
+!s110 1711619102
+V>d<N[gNZg3_MMGljYW1Xa1
+04 6 3 work asm_tb beh 1
+=1-000c29281189-66053c1d-3b4-f04
+R0
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Easm
+Z2 w1711618406
+Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 0
+R1
+Z5 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd
+Z6 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd
+l0
+L7 1
+V9=k92LVem:CORoezUgC6_1
+!s100 aB==O5h@KlD7=4K^<Y^MT3
+Z7 OL;C;2023.3;77
+31
+Z8 !s110 1711619101
+!i10b 1
+Z9 !s108 1711619101.000000
+Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd|
+Z11 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd|
+!i113 0
+Z12 o-93 -work work
+Z13 tExplicit 1 CvgOpt 0
+Aasm_beh
+R3
+R4
+Z14 DEx4 work 3 asm 0 22 9=k92LVem:CORoezUgC6_1
+!i122 0
+l25
+L17 81
+Ve_i5ZWgf5IP>f]IVOoAF62
+!s100 dTeH]D;67]eC1anLIYQQX0
+R7
+31
+R8
+!i10b 1
+R9
+R10
+R11
+!i113 0
+R12
+R13
+Easm_tb
+Z15 w1711619050
+R3
+R4
+!i122 1
+R1
+Z16 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd
+Z17 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd
+l0
+L7 1
+V:aN1:H7LiAD@DEWc<nFUI1
+!s100 [=F9n0^023IG=eeVifS<50
+R7
+31
+R8
+!i10b 1
+R9
+Z18 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd|
+Z19 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd|
+!i113 0
+R12
+R13
+Abeh
+R14
+R3
+R4
+DEx4 work 6 asm_tb 0 22 :aN1:H7LiAD@DEWc<nFUI1
+!i122 1
+l16
+L11 42
+Vz]5cYk^@kkimLZaJHE8E]0
+!s100 eR;jiGz4[m4MEzL05g@?l0
+R7
+31
+R8
+!i10b 1
+R9
+R18
+R19
+!i113 0
+R12
+R13
