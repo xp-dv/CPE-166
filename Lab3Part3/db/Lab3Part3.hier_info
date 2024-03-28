@@ -1,0 +1,20 @@
+|asm
+reset => cs[0].ACLR
+reset => cs[1].ACLR
+clk => cs[0].CLK
+clk => cs[1].CLK
+x => Mux1.IN2
+x => Mux1.IN3
+x => Mux3.IN2
+x => Mux3.IN3
+x => Mux0.IN2
+x => Mux0.IN3
+z << Mux3.DB_MAX_OUTPUT_PORT_TYPE
+y1 << Mux2.DB_MAX_OUTPUT_PORT_TYPE
+y0 << cs[1].DB_MAX_OUTPUT_PORT_TYPE
+cs_o[0] << cs[0].DB_MAX_OUTPUT_PORT_TYPE
+cs_o[1] << cs[1].DB_MAX_OUTPUT_PORT_TYPE
+ns_o[0] << Mux1.DB_MAX_OUTPUT_PORT_TYPE
+ns_o[1] << Mux0.DB_MAX_OUTPUT_PORT_TYPE
+
+

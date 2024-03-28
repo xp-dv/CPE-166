@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "z",
+					"strict" : false
+				},
+				{
+					"name" : "y1",
+					"strict" : false
+				},
+				{
+					"name" : "y0",
+					"strict" : false
+				},
+				{
+					"name" : "cs_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "cs_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ns_o[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ns_o[1]",
+					"strict" : false
+				},
+				{
+					"name" : "x",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
