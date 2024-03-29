@@ -1,8 +1,8 @@
 module vending_machine(
-input clk, reset, one, two, five,
-output reg d, // Dispense Drink. Activated when machine contains 5 cents or more
-output reg [2:0] r = 0, // Coin Return. Max coin return is 4 cents. Drinks cost 5 cents
-output reg [2:0] cs, ns // Current State and Next State
+  input clk, reset, one, two, five,
+  output reg d, // Dispense Drink. Activated when machine contains 5 cents or more
+  output reg [2:0] r = 0, // Coin Return. Max coin return is 4 cents. Drinks cost 5 cents
+  output reg [2:0] cs, ns // Current State and Next State
 );
 
 // State Definitions. cents# = cents fed to machine. ret# = coins to return
