@@ -26,19 +26,19 @@
 # 
 # vcom -93 -work work {C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 02:45:01 on Mar 28,2024
+# Start time: 22:52:55 on Mar 28,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity asm
 # -- Compiling architecture asm_beh of asm
-# End time: 02:45:01 on Mar 28,2024, Elapsed time: 0:00:00
+# End time: 22:52:55 on Mar 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vcom -93 -work work {C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd}
 # Questa Intel Starter FPGA Edition-64 vcom 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 02:45:01 on Mar 28,2024
+# Start time: 22:52:55 on Mar 28,2024
 # vcom -reportprogress 300 -93 -work work C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm_tb.vhd 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -46,12 +46,12 @@
 # -- Compiling entity asm_tb
 # -- Compiling architecture beh of asm_tb
 # -- Loading entity asm
-# End time: 02:45:01 on Mar 28,2024, Elapsed time: 0:00:00
+# End time: 22:52:55 on Mar 28,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs="+acc"  asm_tb
 # vsim -t 1ps -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work -voptargs=""+acc"" asm_tb 
-# Start time: 02:45:01 on Mar 28,2024
+# Start time: 22:52:55 on Mar 28,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in architecture body "asm(asm_beh)".
@@ -68,5 +68,5 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# End time: 02:46:17 on Mar 28,2024, Elapsed time: 0:01:16
+# End time: 22:56:35 on Mar 28,2024, Elapsed time: 0:03:40
 # Errors: 0, Warnings: 1

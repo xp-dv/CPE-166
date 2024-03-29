@@ -12,10 +12,10 @@ Z0 !s99 nomlopt
 cModel Technology
 Z1 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/simulation/questa
 T_opt
-!s110 1711619102
-V>d<N[gNZg3_MMGljYW1Xa1
+!s110 1711691579
+VXHhO[P>1?UPHnl]>R5J=H0
 04 6 3 work asm_tb beh 1
-=1-000c29281189-66053c1d-3b4-f04
+=1-000c29281189-6606573a-16b-1934
 R0
 !s12b OEM100
 !s124 OEM10U2 
@@ -24,7 +24,7 @@ tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 Easm
-Z2 w1711618406
+Z2 w1711688939
 Z3 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
 Z4 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
 !i122 0
@@ -37,9 +37,9 @@ V9=k92LVem:CORoezUgC6_1
 !s100 aB==O5h@KlD7=4K^<Y^MT3
 Z7 OL;C;2023.3;77
 31
-Z8 !s110 1711619101
+Z8 !s110 1711691575
 !i10b 1
-Z9 !s108 1711619101.000000
+Z9 !s108 1711691575.000000
 Z10 !s90 -reportprogress|300|-93|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd|
 Z11 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/asm.vhd|
 !i113 0
@@ -51,9 +51,9 @@ R4
 Z14 DEx4 work 3 asm 0 22 9=k92LVem:CORoezUgC6_1
 !i122 0
 l25
-L17 81
-Ve_i5ZWgf5IP>f]IVOoAF62
-!s100 dTeH]D;67]eC1anLIYQQX0
+L17 83
+V0nY08M^98?i@RIbi:gMgG2
+!s100 QRJ3i4M<zc0fmBSjd9LIe0
 R7
 31
 R8
@@ -65,7 +65,7 @@ R11
 R12
 R13
 Easm_tb
-Z15 w1711619050
+Z15 w1711691526
 R3
 R4
 !i122 1
@@ -92,10 +92,10 @@ R3
 R4
 DEx4 work 6 asm_tb 0 22 :aN1:H7LiAD@DEWc<nFUI1
 !i122 1
-l16
-L11 42
-Vz]5cYk^@kkimLZaJHE8E]0
-!s100 eR;jiGz4[m4MEzL05g@?l0
+l20
+L11 48
+VkzLYL;iOg>jn[e;TdW6330
+!s100 cAOzI3APVRiiU:hkL_lR13
 R7
 31
 R8
