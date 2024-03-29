@@ -8,11 +8,15 @@ entity asm_tb is
 end entity asm_tb;
 
 -- Architecture Body --
-architecture beh of asm_tb is -- behave (beh) is used to describe test bench type architecture
-  signal reset, clk, x: std_logic := '0'; -- Inputs
+architecture beh of asm_tb is -- beh signifies that the test bench architecture type is behavioral
+  -- Declaration and Initialization of Constants --
+  constant CLK_PERIOD: time := 10 ps;
+  -- Declaration and Initialization of Signals --
+  signal reset, clk: std_logic := '0'; -- Reset and Clock Signal
+  signal x: std_logic := '0'; -- Input Signal(s)
+  signal y0, y1, z: std_logic := '0'; -- Moore and Mealy Output Signals
   signal cs_o, ns_o: std_logic_vector(1 downto 0) := "00"; -- Current State Output, Next State Output
-  signal y0, y1, z: std_logic := '0'; -- Moore and Mealy Outputs
-  signal simulate: std_logic := '1'; -- Variable used to stop the simulation
+  signal simulate: std_logic := '1'; -- Variable used to stop the simulation. Must be the "signal" type to be used between processes
 begin
   -- Instantiate Unit Under Test --
   uut: entity work.asm
@@ -26,26 +30,28 @@ begin
       cs_o => cs_o,
       ns_o => ns_o
     );
-  -- Clock Signal
+
+  -- Clock Signal --
   process begin
-    while simulate = '1' loop
+    -- To ensure that the rising edge of the clock signal occurs as close to the middle of the input signal as possible:
+    -- All desired inputs should last for one full clock period
+    -- The input signal should only ever rise or fall with the falling edge of the clock signal
+    while simulate = '1' loop -- Stop clock by setting simulate = '0' in the test bench
+      wait for CLK_PERIOD / 2;
       clk <= not clk;
-      wait for 5 ps; -- 2(5) = 10 picosecond period
     end loop;
-    wait for 5 ps; wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
+    wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
   end process;
 
-  -- State Transition Testing
+  -- State Transition Testing --
   process is
   begin
-    -- Each input will last for a full period to stay synced with the clock
     x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; -- S0
     x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; -- S1
     x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '0'; wait for 10 ps; -- S2
     x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; -- S3
-    
-    reset <= '1'; wait for 10 ps; reset <= '0';
-    
+    reset <= '1'; wait for 10 ps; reset <= '0'; -- Reset
+
     simulate <= '0'; -- End simulation
     wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
   end process;

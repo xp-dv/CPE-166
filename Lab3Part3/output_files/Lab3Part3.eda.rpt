@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Lab3Part3
-Thu Mar 28 02:44:41 2024
+Thu Mar 28 22:52:46 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                        ;
 +---------------------------+---------------------------------------+
-; EDA Netlist Writer Status ; Successful - Thu Mar 28 02:44:41 2024 ;
+; EDA Netlist Writer Status ; Successful - Thu Mar 28 22:52:46 2024 ;
 ; Revision Name             ; Lab3Part3                             ;
 ; Top-level Entity Name     ; asm                                   ;
 ; Family                    ; MAX 10                                ;
@@ -81,13 +81,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Mar 28 02:44:40 2024
+    Info: Processing started: Thu Mar 28 22:52:46 2024
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Lab3Part3 -c Lab3Part3
 Info (204019): Generated file Lab3Part3.vo in folder "C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part3/simulation/questa/" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4642 megabytes
-    Info: Processing ended: Thu Mar 28 02:44:41 2024
-    Info: Elapsed time: 00:00:01
+    Info: Peak virtual memory: 4646 megabytes
+    Info: Processing ended: Thu Mar 28 22:52:46 2024
+    Info: Elapsed time: 00:00:00
     Info: Total CPU time (on all processors): 00:00:00
 
 

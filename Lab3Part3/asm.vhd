@@ -20,20 +20,13 @@ architecture asm_beh of asm is
   constant S2: std_logic_vector(1 downto 0) := "10";
   constant S3: std_logic_vector(1 downto 0) := "11";
   
-  signal cs, ns: std_logic_vector(1 downto 0); -- Internal State Registers (Current State, Next State)
+  signal cs, ns: std_logic_vector(1 downto 0) := "00"; -- Internal State Registers (Current State, Next State)
   
 begin
   -- Set Output State Registers --
   cs_o <= cs;
   ns_o <= ns;
-  -- Current State Register and Reset Logic --
-  process (reset, clk) begin
-    if (reset = '1') then
-      cs <= S0;
-    elsif (rising_edge(clk)) then
-      cs <= ns;
-    end if;
-  end process;
+
   -- Next State Combinational Logic --
   process (cs, x) begin
     case (cs) is
@@ -94,4 +87,13 @@ begin
     end case;
   end process;
 
+  -- Current State Register and Reset Logic --
+  process (reset, clk) begin
+    if (reset = '1') then
+      cs <= S0;
+    elsif (rising_edge(clk)) then
+      cs <= ns;
+    end if;
+  end process;
+  
 end asm_beh;
