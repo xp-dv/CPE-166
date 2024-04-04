@@ -15,15 +15,15 @@ end clk_div;
 
 -- Architecture Body --
 architecture clk_div_beh of clk_div is
-  signal count: std_logic_vector(2 downto 0) := "000"; -- Frequency Count Register
+  signal count: std_logic_vector(1 downto 0) := "00"; -- Frequency Count Register
 begin
   -- Next State Combinational Logic --
   process (clk_i) begin
   if (rising_edge(clk_i)) then
-    if ( count = 7 ) then
-      count <= "000";
+    if ( count = 3 ) then
+      count <= "00";
       clk_o <= '1';
-    elsif (count < 3 ) then
+    elsif (count = 0 ) then
       count <= count + 1;
       clk_o <= '1';
     else
