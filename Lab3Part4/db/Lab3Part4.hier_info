@@ -1,0 +1,27 @@
+|watch
+reset => process_0.IN0
+clk => time_d[0].CLK
+clk => time_d[1].CLK
+clk => time_d[2].CLK
+clk => time_d[3].CLK
+clk => time_d[4].CLK
+clk => time_d[5].CLK
+clk => time_d[6].CLK
+clk => time_d[7].CLK
+clk => time_d[8].CLK
+clk => time_d[9].CLK
+en => process_0.IN1
+y2[0] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[0] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[0] << time_d[0].DB_MAX_OUTPUT_PORT_TYPE
+y0[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+
+

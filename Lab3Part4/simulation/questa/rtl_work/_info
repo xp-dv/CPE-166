@@ -1,0 +1,123 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+!s11e vcom 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/simulation/questa
+T_opt
+!s110 1712322218
+VM@NmhTLLcc9<0:5TK7TPD1
+04 8 3 work watch_tb beh 1
+=3-000c29281189-660ff6a9-25b-1130
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera -L lpm -L sgate -L altera_mf -L altera_lnsim -L fiftyfivenm -L rtl_work -L work +acc
+tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Ewatch
+Z3 w1712322190
+Z4 DPx4 ieee 15 std_logic_arith 0 22 B[jVX6I8iRX2o6WYW0BB>3
+Z5 DPx4 ieee 18 std_logic_unsigned 0 22 o4hn5gYc0WVo72BSL@Ta50
+Z6 DPx4 ieee 11 numeric_std 0 22 F8@]:i<mFK7<TjIzKcTGi0
+Z7 DPx3 std 6 textio 0 22 LS[?81n5ZHWBI9JkBZTV<2
+Z8 DPx4 ieee 14 std_logic_1164 0 22 6<US`=mgl_dFdCEFF7J=m1
+!i122 5
+R2
+Z9 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd
+Z10 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd
+l0
+L11 1
+V^@kfja=<EN8RkMWe3aG0S2
+!s100 ^0kJgCB6K<6MNf8VSodUS2
+Z11 OL;C;2023.3;77
+32
+Z12 !s110 1712322210
+!i10b 1
+Z13 !s108 1712322210.000000
+Z14 !s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd|
+Z15 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd|
+!i113 0
+Z16 o-work work
+Z17 tExplicit 1 CvgOpt 0
+Awatch_beh
+R4
+R5
+R6
+R7
+R8
+Z18 DEx4 work 5 watch 0 22 ^@kfja=<EN8RkMWe3aG0S2
+!i122 5
+l22
+L20 41
+V[dl2KWnhWk5Bm8k]L^ZXP3
+!s100 bnc_EHCXRTX@oTJ6g2C8F2
+R11
+32
+R12
+!i10b 1
+R13
+R14
+R15
+!i113 0
+R16
+R17
+Ewatch_tb
+Z19 w1712321925
+R4
+R5
+R7
+R8
+!i122 6
+R2
+Z20 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd
+Z21 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd
+l0
+L9 1
+VkGLR_YEki4MfYCD:Rm5iK3
+!s100 9[djQ[F<J<cB^;?>U<1S72
+R11
+32
+Z22 !s110 1712322212
+!i10b 1
+Z23 !s108 1712322211.000000
+Z24 !s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd|
+Z25 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd|
+!i113 0
+R16
+R17
+Abeh
+R6
+R18
+R4
+R5
+R7
+R8
+DEx4 work 8 watch_tb 0 22 kGLR_YEki4MfYCD:Rm5iK3
+!i122 6
+l22
+L13 43
+VoD4PDiB<XQohkn9^H@IeL1
+!s100 BBQF69N19MY4zamZ?R3Ba0
+R11
+32
+R22
+!i10b 1
+R23
+R24
+R25
+!i113 0
+R16
+R17
