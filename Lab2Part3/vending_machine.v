@@ -108,7 +108,7 @@ always @(cs or one or two or five) begin // Mealy State Machine
   endcase
 end
 
-/* Current State Register and Reset Logic */
+/* State Register and Reset Logic */
 always @(posedge clk or posedge reset) begin // Asynchronous active-high reset syntax required by IEEE Verilog standard
   if (reset)
     cs <= cents0;
