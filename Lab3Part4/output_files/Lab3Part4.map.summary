@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Fri Apr  5 05:47:28 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : Lab3Part4
+Top-level Entity Name : watch
+Family : MAX 10
+Total logic elements : 55
+    Total combinational functions : 55
+    Dedicated logic registers : 10
+Total registers : 10
+Total pins : 15
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0

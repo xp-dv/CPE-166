@@ -14,7 +14,7 @@ architecture beh of asm_tb is -- beh signifies that the test bench architecture 
   -- Declaration and Initialization of Signals --
   signal reset, clk: std_logic := '0'; -- Reset and Clock Signal
   signal x: std_logic := '0'; -- Input Signal(s)
-  signal y0, y1, z: std_logic := '0'; -- Moore and Mealy Output Signals
+  signal y0, y1, z: std_logic := '0'; -- Moore and Mealy Output Signal(s)
   signal cs_o, ns_o: std_logic_vector(1 downto 0) := "00"; -- Current State Output, Next State Output
   signal simulate: std_logic := '1'; -- Variable used to stop the simulation. Must be the "signal" type to be used between processes
 begin

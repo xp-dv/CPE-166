@@ -9,26 +9,26 @@ use ieee.std_logic_arith.all;
 entity clk_div is
   port (
     clk_i: in std_logic; -- Clock Input
-    clk_o: out std_logic; -- Clock Output
+    clk_o: out std_logic := '0'; -- Clock Output
+    count_o: out std_logic_vector(1 downto 0)
   );
 end clk_div;
 
 -- Architecture Body --
 architecture clk_div_beh of clk_div is
-  signal count: std_logic_vector(2 downto 0) := "000"; -- Frequency Count Register
+  signal count: std_logic_vector(1 downto 0) := "00"; -- Internal Frequency Count Register
 begin
-  -- Next State Combinational Logic --
+  count_o <= count;
   process (clk_i) begin
   if (rising_edge(clk_i)) then
-    if ( count = 7 ) then
-      count <= "000";
-      clk_o <= '1';
-    elsif (count < 3 ) then
+    if (count = "11") then
+      count <= "00";
+      clk_o <= '0';
+    elsif (count = "01") then
       count <= count + 1;
       clk_o <= '1';
     else
       count <= count + 1;
-      clk_o <= '0';
     end if;
   end if;
   end process;
