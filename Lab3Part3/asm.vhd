@@ -87,7 +87,7 @@ begin
     end case;
   end process;
 
-  -- Current State Register and Reset Logic --
+  -- State Register and Reset Logic --
   process (reset, clk) begin
     if (reset = '1') then
       cs <= S0;
