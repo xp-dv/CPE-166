@@ -1,4 +1,47 @@
-|watch
+|stopwatch
+reset => stopwatch_fsm:stopwatch_fsm.reset
+reset => watch:watch.reset
+clk => clk_div:clk_div.clk_i
+start => stopwatch_fsm:stopwatch_fsm.start
+stop => stopwatch_fsm:stopwatch_fsm.stop
+y2[0] << watch:watch.y2[0]
+y2[1] << watch:watch.y2[1]
+y2[2] << watch:watch.y2[2]
+y2[3] << watch:watch.y2[3]
+y1[0] << watch:watch.y1[0]
+y1[1] << watch:watch.y1[1]
+y1[2] << watch:watch.y1[2]
+y1[3] << watch:watch.y1[3]
+y0[0] << watch:watch.y0[0]
+y0[1] << watch:watch.y0[1]
+y0[2] << watch:watch.y0[2]
+y0[3] << watch:watch.y0[3]
+
+
+|stopwatch|clk_div:clk_div
+clk_i => clk_o~reg0.CLK
+clk_i => count[0].CLK
+clk_i => count[1].CLK
+clk_o <= clk_o~reg0.DB_MAX_OUTPUT_PORT_TYPE
+count_o[0] <= count[0].DB_MAX_OUTPUT_PORT_TYPE
+count_o[1] <= count[1].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|stopwatch|stopwatch_fsm:stopwatch_fsm
+reset => cs[0].ACLR
+reset => cs[1].ACLR
+clk => cs[0].CLK
+clk => cs[1].CLK
+start => Mux0.IN3
+stop => Mux0.IN2
+en_o <= en_o$latch.DB_MAX_OUTPUT_PORT_TYPE
+cs_o[0] <= cs[0].DB_MAX_OUTPUT_PORT_TYPE
+cs_o[1] <= cs[1].DB_MAX_OUTPUT_PORT_TYPE
+ns_o[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+ns_o[1] <= <GND>
+
+
+|stopwatch|watch:watch
 reset => process_0.IN0
 clk => time_d[0].CLK
 clk => time_d[1].CLK
@@ -10,18 +53,18 @@ clk => time_d[6].CLK
 clk => time_d[7].CLK
 clk => time_d[8].CLK
 clk => time_d[9].CLK
-en => process_0.IN1
-y2[0] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y2[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y2[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y2[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y1[0] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y1[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y1[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y1[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y0[0] << time_d[0].DB_MAX_OUTPUT_PORT_TYPE
-y0[1] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y0[2] << bcd.DB_MAX_OUTPUT_PORT_TYPE
-y0[3] << bcd.DB_MAX_OUTPUT_PORT_TYPE
+en_i => process_0.IN1
+y2[0] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y2[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[0] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y1[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[0] <= time_d[0].DB_MAX_OUTPUT_PORT_TYPE
+y0[1] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[2] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
+y0[3] <= bcd.DB_MAX_OUTPUT_PORT_TYPE
 
 

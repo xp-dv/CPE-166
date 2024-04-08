@@ -1,99 +1,75 @@
--- ---- Stopwatch Top-Level Module ----
--- -- Required Libraries --
--- library ieee;
--- use ieee.std_logic_1164.all;
+---- Stopwatch Top-Level Module ----
+-- Required Libraries --
+library ieee;
+use ieee.std_logic_1164.all;
 
--- -- Entity Declaration --
--- entity asm is
---   port (
---     reset, clk: in std_logic; -- Reset and Clock
---     x: in std_logic; -- Input Signal
---     z, y1, y0: out std_logic; -- Mealy Output, Moore Outputs
---     cs_o, ns_o: out std_logic_vector(1 downto 0) -- Output State Registers (Current State Output, Next State Output)
---   );
--- end asm;
+-- Entity Declaration --
+entity stopwatch is
+  port (
+    reset, clk: in std_logic; -- Reset and Clock
+    start, stop: in std_logic; -- Input Signal
+    y2, y1, y0: out std_logic_vector(3 downto 0) -- 3 BCD Digit Time Output
+  );
+end stopwatch;
 
--- -- Architecture Body --
--- architecture asm_beh of asm is
---   constant S0: std_logic_vector(1 downto 0) := "00";
---   constant S1: std_logic_vector(1 downto 0) := "01";
---   constant S2: std_logic_vector(1 downto 0) := "10";
---   constant S3: std_logic_vector(1 downto 0) := "11";
-  
---   signal cs, ns: std_logic_vector(1 downto 0) := "00"; -- Internal State Registers (Current State, Next State)
-  
--- begin
---   -- Set Output State Registers --
---   cs_o <= cs;
---   ns_o <= ns;
+-- Architecture Body --
+architecture interface of stopwatch is
+  -- Declare Internal Signals --
+  signal clk2: std_logic; -- Internal 1 Hz Clock
+  signal en_io: std_logic; -- Enable wire
 
---   -- Next State Combinational Logic --
---   process (cs, x) begin
---     case (cs) is
---       when S0 =>
---         if (x = '0') then
---           ns <= S0;
---         else
---           ns <= S1;
---         end if;
---       when S1 =>
---         if (x = '0') then
---           ns <= S2;
---         else
---           ns <= S1;
---         end if;
---       when S2 =>
---         if (x = '0') then
---           ns <= S3;
---         else
---           ns <= S1;
---         end if;
---       when S3 => ns <= S0;
---       when others => ns <= S0;
---     end case;
---   end process;
+  -- Module Instance Declaration --
+  -- component clk_div is
+  --   port (
+  --     clk_i: in std_logic; -- Clock Input
+  --     clk_o: out std_logic := '0' -- Clock Output
+  --   );
+  -- end component clk_div;
 
---   -- Output Combinational Logic --
---   process (cs, x) begin
---     case (cs) is
---       when S0 =>
---         y0 <= '0';
---         y1 <= '0';
---         z <= '0';
---       when S1 =>
---         y0 <= '0';
---         y1 <= '1';
---         if (x = '0') then
---           z <= '0';
---         else
---           z <= '1';
---         end if;
---       when S2 =>
---         y0 <= '1';
---         y1 <= '0';
---         if (x = '0') then
---           z <= '0';
---         else
---           z <= '1';
---         end if;
---       when S3 =>
---         y0 <= '1';
---         y1 <= '0';
---         z <= '0';
---       when others =>
---         y0 <= '0';
---         y1 <= '0';
---         z <= '0';
---     end case;
---   end process;
+  -- component stopwatch_fsm is
+  --   port (
+  --     reset, clk: in std_logic; -- Reset and Clock
+  --     start, stop: in std_logic; -- Input Signal
+  --     en_o: out std_logic -- Watch Enable Moore Output
+  --   );
+  -- end component stopwatch_fsm;
 
---   -- Current State Register and Reset Logic --
---   process (reset, clk) begin
---     if (reset = '1') then
---       cs <= S0;
---     elsif (rising_edge(clk)) then
---       cs <= ns;
---     end if;
---   end process;
-  
--- end asm_beh;
+  -- component watch is
+  --   port (
+  --     reset, clk: in std_logic; -- Reset and Clock
+  --     en_i: in std_logic; -- Watch Enable
+  --     y2, y1, y0: out std_logic_vector(3 downto 0) -- 3 BCD Digit Time Output
+  --   );
+  -- end component watch;
+
+begin
+  -- Module Instantiation --
+  clk_div: entity work.clk_div
+    port map (
+      clk_i => clk,
+      clk_o => clk2,
+      count_o => open
+    );
+
+  stopwatch_fsm: entity work.stopwatch_fsm
+    port map (
+      reset => reset,
+      clk => clk2,
+      start => start,
+      stop => stop,
+      en_o => en_io,
+      cs_o => open,
+      ns_o => open
+    );
+
+  watch: entity work.watch
+    port map (
+      reset => reset,
+      clk => clk2,
+      en_i => en_io,
+      y2 => y2,
+      y1 => y1,
+      y0 => y0
+    );
+
+end interface;
