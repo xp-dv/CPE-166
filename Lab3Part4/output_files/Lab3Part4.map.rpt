@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab3Part4
-Fri Apr  5 05:47:28 2024
+Mon Apr  8 03:35:59 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,10 +13,13 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Registers Removed During Synthesis
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "stopwatch_fsm:stopwatch_fsm"
+ 11. Port Connectivity Checks: "clk_div:clk_div"
+ 12. Post-Synthesis Netlist Statistics for Top Partition
+ 13. Elapsed Time Per Partition
+ 14. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +46,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Fri Apr  5 05:47:28 2024          ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr  8 03:35:59 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab3Part4                                      ;
-; Top-level Entity Name              ; watch                                          ;
+; Top-level Entity Name              ; stopwatch                                      ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 55                                             ;
-;     Total combinational functions  ; 55                                             ;
-;     Dedicated logic registers      ; 10                                             ;
-; Total registers                    ; 10                                             ;
-; Total pins                         ; 15                                             ;
+; Total logic elements               ; 68                                             ;
+;     Total combinational functions  ; 68                                             ;
+;     Dedicated logic registers      ; 14                                             ;
+; Total registers                    ; 14                                             ;
+; Total pins                         ; 16                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -68,7 +71,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; watch              ; Lab3Part4          ;
+; Top-level entity name                                            ; stopwatch          ; Lab3Part4          ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -166,55 +169,71 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                           ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                    ; Library ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
-; watch.vhd                        ; yes             ; User VHDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd ;         ;
-+----------------------------------+-----------------+-----------------+-----------------------------------------------------------------+---------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                   ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
+; stopwatch.vhd                    ; yes             ; User VHDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd     ;         ;
+; watch.vhd                        ; yes             ; User VHDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd         ;         ;
+; stopwatch_fsm.vhd                ; yes             ; User VHDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd ;         ;
+; clk_div.vhd                      ; yes             ; User VHDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div.vhd       ;         ;
++----------------------------------+-----------------+-----------------+-------------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary               ;
-+---------------------------------------------+-------------+
-; Resource                                    ; Usage       ;
-+---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 55          ;
-;                                             ;             ;
-; Total combinational functions               ; 55          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 42          ;
-;     -- 3 input functions                    ; 2           ;
-;     -- <=2 input functions                  ; 11          ;
-;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 47          ;
-;     -- arithmetic mode                      ; 8           ;
-;                                             ;             ;
-; Total registers                             ; 10          ;
-;     -- Dedicated logic registers            ; 10          ;
-;     -- I/O registers                        ; 0           ;
-;                                             ;             ;
-; I/O pins                                    ; 15          ;
-;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
-;                                             ;             ;
-; Maximum fan-out node                        ; process_0~0 ;
-; Maximum fan-out                             ; 10          ;
-; Total fan-out                               ; 251         ;
-; Average fan-out                             ; 2.64        ;
-+---------------------------------------------+-------------+
++---------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                         ;
++---------------------------------------------+-----------------------+
+; Resource                                    ; Usage                 ;
++---------------------------------------------+-----------------------+
+; Estimated Total logic elements              ; 68                    ;
+;                                             ;                       ;
+; Total combinational functions               ; 68                    ;
+; Logic element usage by number of LUT inputs ;                       ;
+;     -- 4 input functions                    ; 44                    ;
+;     -- 3 input functions                    ; 3                     ;
+;     -- <=2 input functions                  ; 21                    ;
+;                                             ;                       ;
+; Logic elements by mode                      ;                       ;
+;     -- normal mode                          ; 59                    ;
+;     -- arithmetic mode                      ; 9                     ;
+;                                             ;                       ;
+; Total registers                             ; 14                    ;
+;     -- Dedicated logic registers            ; 14                    ;
+;     -- I/O registers                        ; 0                     ;
+;                                             ;                       ;
+; I/O pins                                    ; 16                    ;
+;                                             ;                       ;
+; Embedded Multiplier 9-bit elements          ; 0                     ;
+;                                             ;                       ;
+; Maximum fan-out node                        ; clk_div:clk_div|clk_o ;
+; Maximum fan-out                             ; 11                    ;
+; Total fan-out                               ; 292                   ;
+; Average fan-out                             ; 2.56                  ;
++---------------------------------------------+-----------------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
-; |watch                     ; 55 (55)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 15   ; 0            ; 0          ; |watch              ; watch       ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+---------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                           ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                    ; Entity Name   ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
+; |stopwatch                       ; 68 (0)              ; 14 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 16   ; 0            ; 0          ; |stopwatch                             ; stopwatch     ; work         ;
+;    |clk_div:clk_div|             ; 3 (3)               ; 3 (3)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|clk_div:clk_div             ; clk_div       ; work         ;
+;    |stopwatch_fsm:stopwatch_fsm| ; 1 (1)               ; 1 (1)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|stopwatch_fsm:stopwatch_fsm ; stopwatch_fsm ; work         ;
+;    |watch:watch|                 ; 64 (64)             ; 10 (10)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |stopwatch|watch:watch                 ; watch         ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+----------------------------------------+---------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++--------------------------------------------------------------------------------+
+; Registers Removed During Synthesis                                             ;
++---------------------------------------+----------------------------------------+
+; Register name                         ; Reason for Removal                     ;
++---------------------------------------+----------------------------------------+
+; stopwatch_fsm:stopwatch_fsm|cs[1]     ; Stuck at GND due to stuck port data_in ;
+; Total Number of Removed Registers = 1 ;                                        ;
++---------------------------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -222,14 +241,33 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 10    ;
+; Total registers                              ; 14    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 10    ;
+; Number of registers using Asynchronous Clear ; 11    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 2     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "stopwatch_fsm:stopwatch_fsm"                                                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; cs_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
+; ns_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "clk_div:clk_div"                                                                       ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; Port    ; Type   ; Severity ; Details                                                                             ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
+; count_o ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++---------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -237,21 +275,22 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 10                          ;
-;     CLR               ; 10                          ;
-; cycloneiii_lcell_comb ; 58                          ;
-;     arith             ; 8                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 50                          ;
-;         1 data inputs ; 5                           ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 42                          ;
+; boundary_port         ; 16                          ;
+; cycloneiii_ff         ; 14                          ;
+;     CLR               ; 11                          ;
+;     ENA               ; 2                           ;
+;     plain             ; 1                           ;
+; cycloneiii_lcell_comb ; 71                          ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 9                           ;
+;     normal            ; 62                          ;
+;         1 data inputs ; 7                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 44                          ;
 ;                       ;                             ;
 ; Max LUT depth         ; 8.00                        ;
-; Average LUT depth     ; 5.34                        ;
+; Average LUT depth     ; 4.88                        ;
 +-----------------------+-----------------------------+
 
 
@@ -270,18 +309,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Fri Apr  5 05:47:18 2024
+    Info: Processing started: Mon Apr  8 03:35:50 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab3Part4 -c Lab3Part4
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
-Info (12021): Found 0 design units, including 0 entities, in source file stopwatch.vhd
+Info (12021): Found 2 design units, including 1 entities, in source file stopwatch.vhd
+    Info (12022): Found design unit 1: stopwatch-interface File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd Line: 16
+    Info (12023): Found entity 1: stopwatch File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file watch.vhd
-    Info (12022): Found design unit 1: watch-watch_beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd Line: 20
+    Info (12022): Found design unit 1: watch-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd Line: 20
     Info (12023): Found entity 1: watch File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file watch_tb.vhd
     Info (12022): Found design unit 1: watch_tb-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd Line: 13
     Info (12023): Found entity 1: watch_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/watch_tb.vhd Line: 9
 Info (12021): Found 2 design units, including 1 entities, in source file stopwatch_fsm.vhd
-    Info (12022): Found design unit 1: stopwatch_fsm-stopwatch_fsm_beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 17
+    Info (12022): Found design unit 1: stopwatch_fsm-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 17
     Info (12023): Found entity 1: stopwatch_fsm File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file stopwatch_fsm_tb.vhd
     Info (12022): Found design unit 1: stopwatch_fsm_tb-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm_tb.vhd Line: 11
@@ -290,20 +331,30 @@ Info (12021): Found 2 design units, including 1 entities, in source file clk_div
     Info (12022): Found design unit 1: clk_div_tb-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div_tb.vhd Line: 11
     Info (12023): Found entity 1: clk_div_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div_tb.vhd Line: 7
 Info (12021): Found 2 design units, including 1 entities, in source file clk_div.vhd
-    Info (12022): Found design unit 1: clk_div-clk_div_beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div.vhd Line: 18
+    Info (12022): Found design unit 1: clk_div-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div.vhd Line: 18
     Info (12023): Found entity 1: clk_div File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/clk_div.vhd Line: 9
-Info (12127): Elaborating entity "watch" for the top level hierarchy
+Info (12021): Found 2 design units, including 1 entities, in source file stopwatch_tb.vhd
+    Info (12022): Found design unit 1: stopwatch_tb-beh File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_tb.vhd Line: 11
+    Info (12023): Found entity 1: stopwatch_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_tb.vhd Line: 7
+Info (12127): Elaborating entity "stopwatch" for the top level hierarchy
+Info (12128): Elaborating entity "clk_div" for hierarchy "clk_div:clk_div" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd Line: 47
+Info (12128): Elaborating entity "stopwatch_fsm" for hierarchy "stopwatch_fsm:stopwatch_fsm" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd Line: 54
+Warning (10631): VHDL Process Statement warning at stopwatch_fsm.vhd(28): inferring latch(es) for signal or variable "en_o", which holds its previous value in one or more paths through the process File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 28
+Info (10041): Inferred latch for "en_o" at stopwatch_fsm.vhd(28) File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 28
+Info (12128): Elaborating entity "watch" for hierarchy "watch:watch" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch.vhd Line: 65
+Warning (14026): LATCH primitive "stopwatch_fsm:stopwatch_fsm|en_o" is permanently enabled File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 11
+Warning (14026): LATCH primitive "stopwatch_fsm:stopwatch_fsm|en_o" is permanently enabled File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab3Part4/stopwatch_fsm.vhd Line: 11
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 70 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 3 input pins
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
     Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 55 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
-    Info: Peak virtual memory: 4795 megabytes
-    Info: Processing ended: Fri Apr  5 05:47:28 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:12
+    Info (21061): Implemented 68 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 3 warnings
+    Info: Peak virtual memory: 4787 megabytes
+    Info: Processing ended: Mon Apr  8 03:35:59 2024
+    Info: Elapsed time: 00:00:09
+    Info: Total CPU time (on all processors): 00:00:13
 
 
