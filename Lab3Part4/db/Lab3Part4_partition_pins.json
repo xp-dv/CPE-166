@@ -52,15 +52,19 @@
 					"strict" : false
 				},
 				{
-					"name" : "clk",
-					"strict" : false
-				},
-				{
 					"name" : "reset",
 					"strict" : false
 				},
 				{
-					"name" : "en",
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "start",
+					"strict" : false
+				},
+				{
+					"name" : "stop",
 					"strict" : false
 				}
 			]

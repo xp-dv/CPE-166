@@ -11,8 +11,9 @@ end entity clk_div_tb;
 architecture beh of clk_div_tb is -- beh signifies that the architecture type is behavioral
   -- Declaration and Initialization of Constants --
   constant CLK_PERIOD: time := 250 ms; -- f = 4 Hz
+
   -- Declaration and Initialization of Signals --
-  signal clk_i: std_logic := '0'; -- Input Clock Signal
+  signal clk_i: std_logic := '1'; -- Input Clock Signal
   signal clk_o: std_logic := '0'; -- Output Clock Signal
   signal count_o: std_logic_vector(1 downto 0) := "00";
 

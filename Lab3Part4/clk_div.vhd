@@ -10,15 +10,15 @@ entity clk_div is
   port (
     clk_i: in std_logic; -- Clock Input
     clk_o: out std_logic := '0'; -- Clock Output
-    count_o: out std_logic_vector(1 downto 0)
+    count_o: out std_logic_vector(1 downto 0) -- FOR TEST BENCH ONLY
   );
 end clk_div;
 
 -- Architecture Body --
-architecture clk_div_beh of clk_div is
+architecture beh of clk_div is
   signal count: std_logic_vector(1 downto 0) := "00"; -- Internal Frequency Count Register
 begin
-  count_o <= count;
+  count_o <= count; -- FOR TEST BENCH ONLY
   process (clk_i) begin
   if (rising_edge(clk_i)) then
     if (count = "11") then
@@ -33,4 +33,4 @@ begin
   end if;
   end process;
   
-end clk_div_beh;
+end beh;

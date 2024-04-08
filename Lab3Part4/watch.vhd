@@ -11,18 +11,18 @@ use ieee.std_logic_unsigned.all;
 entity watch is
   port (
     reset, clk: in std_logic; -- Reset and Clock
-    en: in std_logic; -- Watch Enable
+    en_i: in std_logic; -- Watch Enable
     y2, y1, y0: out std_logic_vector(3 downto 0) -- 3 BCD Digit Time Output
   );
 end watch;
 
 -- Architecture Body --
-architecture watch_beh of watch is
+architecture beh of watch is
   signal time_d: std_logic_vector(9 downto 0) := (others => '0'); -- Time Counter (Max Register Value = 1023, but Max Time Count = 999 due to 3 BCD Digit Display)
 begin
 
-  process (reset, en, clk) begin
-    if (reset = '1' or en = '0') then
+  process (reset, en_i, clk) begin
+    if (reset = '1' or en_i = '0') then
       time_d <= (others => '0');
     elsif (rising_edge(clk)) then
       if (time_d = 999) then
@@ -57,4 +57,4 @@ begin
     y2 <= bcd(11 downto 8);
 
   end process;
-end watch_beh;
+end beh;
