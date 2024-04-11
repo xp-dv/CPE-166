@@ -10,7 +10,7 @@ module vending_machine(
 // This relieves the compiler from having to truncate full-size decimal integers into 3-bit integers which will give less compiler warnings
 parameter cents0 = 3'b000, cents1 = 3'b001, cents2 = 3'b010, cents3 = 3'b0011, cents4 = 3'b100;
 
-/* Next State Combinational Logic */
+/* State Combinational Logic */
 always @(cs or one or two or five) begin // Mealy State Machine
   case (cs)
     cents0: begin
