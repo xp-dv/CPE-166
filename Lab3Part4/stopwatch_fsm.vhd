@@ -24,7 +24,7 @@ begin
   cs_o <= cs;
   ns_o <= ns;
 
-  -- Next State and Output Combinational Logic --
+  -- State and Output Combinational Logic --
   process (cs, start, stop) begin
     case (cs) is
       when IDLE =>

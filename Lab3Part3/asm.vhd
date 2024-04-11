@@ -27,7 +27,7 @@ begin
   cs_o <= cs;
   ns_o <= ns;
 
-  -- Next State Combinational Logic --
+  -- State Combinational Logic --
   process (cs, x) begin
     case (cs) is
       when S0 =>
