@@ -1,27 +1,30 @@
----- Parity Bit Generator Package ----
+---- Even Parity Bit Generator Package ----
 -- Required Libraries --
 library ieee;
 use ieee.std_logic_1164.all;
 
 -- Package Declaration --
 package parity_pack is
-  function parity (din: std_logic_vector) -- parity function with any size input Data In
-  return std_logic;
+  function parity (
+    d: std_logic_vector -- Data Input (Any size)
+    )
+    return std_logic; -- Parity Bit Output
 end parity_pack;
 
 -- Package Body --
 package body parity_pack is
   -- Parity Function (Even) --
   function parity (
-    din: std_logic_vector -- Data in
+    d: std_logic_vector
     )
     return std_logic is
-    variable par_bit: std_logic; -- Parity Bit
+    variable pb: std_logic; -- Parity Bit
   begin
-    par_bit := din(0); -- Variables use the := assignment operator
-    for J in 1 to din'high loop -- Input is not size constrained
-    par_bit := par_bit xor din(J);
+    pb := d(0); -- Set initial parity bit to match first data bit, making parity even
+    for i in 1 to d'high loop -- Loop through all values of d so the input is not size constrained
+      pb := pb xor d(i); -- Calculate parity bit according to each bit
     end loop;
-    return par_bit;
+    return pb;
+
   end parity;
 end parity_pack;
