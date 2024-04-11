@@ -18,32 +18,9 @@ architecture interface of stopwatch is
   signal clk2: std_logic; -- Internal 1 Hz Clock
   signal en_io: std_logic; -- Enable wire
 
-  -- Module Instance Declaration --
-  -- component clk_div is
-  --   port (
-  --     clk_i: in std_logic; -- Clock Input
-  --     clk_o: out std_logic := '0' -- Clock Output
-  --   );
-  -- end component clk_div;
-
-  -- component stopwatch_fsm is
-  --   port (
-  --     reset, clk: in std_logic; -- Reset and Clock
-  --     start, stop: in std_logic; -- Input Signal
-  --     en_o: out std_logic -- Watch Enable Moore Output
-  --   );
-  -- end component stopwatch_fsm;
-
-  -- component watch is
-  --   port (
-  --     reset, clk: in std_logic; -- Reset and Clock
-  --     en_i: in std_logic; -- Watch Enable
-  --     y2, y1, y0: out std_logic_vector(3 downto 0) -- 3 BCD Digit Time Output
-  --   );
-  -- end component watch;
-
 begin
   -- Module Instantiation --
+  -- Using direct instantiation as there is only one instance of each module
   clk_div: entity work.clk_div
     port map (
       clk_i => clk,

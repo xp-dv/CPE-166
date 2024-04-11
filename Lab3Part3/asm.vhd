@@ -14,7 +14,7 @@ entity asm is
 end asm;
 
 -- Architecture Body --
-architecture asm_beh of asm is
+architecture beh of asm is
   constant S0: std_logic_vector(1 downto 0) := "00";
   constant S1: std_logic_vector(1 downto 0) := "01";
   constant S2: std_logic_vector(1 downto 0) := "10";
@@ -96,4 +96,4 @@ begin
     end if;
   end process;
   
-end asm_beh;
+end beh;

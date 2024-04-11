@@ -18,7 +18,7 @@ architecture beh of watch_tb is -- beh signifies that the architecture type is b
   -- Declaration and Initialization of Signals --
   signal reset, clk: std_logic := '0'; -- Reset and Clock Signal
   signal en_i: std_logic := '0'; -- Watch Enable Input Signal
-  signal y2, y1, y0: std_logic_vector(3 downto 0) := "0000"; -- Current State Output, Next State Output
+  signal y2, y1, y0: std_logic_vector(3 downto 0) := "0000"; -- 3 BCD Digit Count Output
 
   signal simulate: std_logic := '1'; -- Variable used to stop the simulation. Must be the "signal" type to be used between processes
 begin
@@ -50,7 +50,7 @@ begin
   begin
     en_i <= '0'; wait for CLK_PERIOD; en_i <= '1'; -- Enable
     wait for TEST_DURATION; -- Watch Counter
-    simulate <= '0'; reset <= '1'; wait for CLK_PERIOD; reset <= '0'; -- Reset
+    simulate <= '0'; reset <= '1'; wait for CLK_PERIOD; reset <= '0'; -- Reset and Stop Clock Simulation
 
     wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
   end process;

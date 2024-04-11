@@ -46,13 +46,12 @@ begin
   -- State Transition Testing --
   process is
   begin
-    x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; -- S0
-    x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; -- S1
-    x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '0'; wait for 10 ps; -- S2
-    x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '0'; wait for 10 ps; x <= '1'; wait for 10 ps; -- S3
-    reset <= '1'; wait for 10 ps; reset <= '0'; -- Reset
+    x <= '0'; wait for CLK_PERIOD; x <= '1'; wait for CLK_PERIOD; -- S0
+    x <= '1'; wait for CLK_PERIOD; x <= '0'; wait for CLK_PERIOD; -- S1
+    x <= '1'; wait for CLK_PERIOD; x <= '0'; wait for CLK_PERIOD; x <= '0'; wait for CLK_PERIOD; -- S2
+    x <= '0'; wait for CLK_PERIOD; x <= '1'; wait for CLK_PERIOD; x <= '0'; wait for CLK_PERIOD; x <= '0'; wait for CLK_PERIOD; x <= '1'; wait for CLK_PERIOD; -- S3
+    simulate <= '0'; reset <= '1'; wait for CLK_PERIOD; reset <= '0'; -- Reset and Stop Clock Simulation
 
-    simulate <= '0'; -- End simulation
     wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
   end process;
 end beh;

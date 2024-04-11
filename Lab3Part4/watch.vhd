@@ -2,8 +2,6 @@
 -- Required Libraries --
 library ieee;
 use ieee.std_logic_1164.all;
--- use ieee.std_logic_unsigned.all;
--- use ieee.std_logic_arith.all;
 use ieee.numeric_std.all;
 use ieee.std_logic_unsigned.all;
 
@@ -37,9 +35,10 @@ begin
     variable bcd: std_logic_vector(11 downto 0) := (others => '0');
   begin
     bcd := (others => '0');
-    -- Double Dabble Binary to BCD Method
+    -- Double Dabble Binary to BCD Method --
     for i in 0 to 9 loop -- Iterate once for each bit in input number
-      if (bcd(3 downto 0) >= "0101") then -- If any BCD digit is >= 5, add 3
+      -- If any BCD digit is >= 5, add 3
+      if (bcd(3 downto 0) >= "0101") then
         bcd(3 downto 0) := std_logic_vector(unsigned(bcd(3 downto 0)) + "0011");
       end if;
       if (bcd(7 downto 4) >= "0101") then
