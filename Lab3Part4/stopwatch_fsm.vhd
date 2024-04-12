@@ -7,17 +7,17 @@ use ieee.std_logic_1164.all;
 entity stopwatch_fsm is
   port (
     reset, clk: in std_logic; -- Reset and Clock
-    start, stop: in std_logic; -- Input Signals
-    en_o: out std_logic; -- Watch Enable Moore Output
-    cs_o, ns_o: out std_logic_vector(1 downto 0) -- Output State Registers (Current State Output, Next State Output) -- FOR TEST BENCH ONLY
+    start, stop: in std_logic; -- Inputs
+    en_o: out std_logic; -- Watch Enable Output
+    cs_o, ns_o: out std_logic -- Output State Registers (Current State Output, Next State Output) -- FOR TEST BENCH ONLY
   );
 end stopwatch_fsm;
 
 -- Architecture Body --
 architecture beh of stopwatch_fsm is
-  constant IDLE: std_logic_vector(1 downto 0) := "00";
-  constant RUN: std_logic_vector(1 downto 0) := "01";
-  signal cs, ns: std_logic_vector(1 downto 0) := "00"; -- Internal State Registers (Current State, Next State
+  constant IDLE: std_logic := '0';
+  constant RUN: std_logic := '1';
+  signal cs, ns: std_logic := '0'; -- Internal State Registers (Current State, Next State
 
 begin
   -- FOR TEST BENCH ONLY: Set Output State Registers --
