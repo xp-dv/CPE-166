@@ -13,10 +13,10 @@ architecture beh of stopwatch_fsm_tb is -- beh signifies that the architecture t
   constant CLK_PERIOD: time := 1 sec; -- f = 1 Hz
 
   -- Declaration and Initialization of Signals --
-  signal reset, clk: std_logic := '0'; -- Reset and Clock Signal
-  signal start, stop: std_logic := '0'; -- Input Signal(s)
-  signal en_o: std_logic := '0'; -- Output Signal(s)
-  signal cs_o, ns_o: std_logic_vector(1 downto 0) := "00"; -- Current State Output, Next State Output
+  signal reset, clk: std_logic := '0'; -- Reset and Clock
+  signal start, stop: std_logic := '0'; -- Inputs
+  signal en_o: std_logic := '0'; -- Watch Enable Output
+  signal cs_o, ns_o: std_logic := '0'; -- Current State Output, Next State Output
 
   signal simulate: std_logic := '1'; -- Variable used to stop the simulation. Must be the "signal" type to be used between processes
 begin
