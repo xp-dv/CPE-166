@@ -21,10 +21,10 @@ begin
   count_o <= count; -- FOR TEST BENCH ONLY
   process (clk_i) begin
   if (rising_edge(clk_i)) then
-    if (count = "11") then
+    if (count = "11") then -- Counter overflow reset
       count <= "00";
       clk_o <= '0';
-    elsif (count = "01") then
+    elsif (count = "01") then -- Half period point
       count <= count + 1;
       clk_o <= '1';
     else
