@@ -13,8 +13,8 @@ architecture beh of clk_div_tb is -- beh signifies that the architecture type is
   constant CLK_PERIOD: time := 250 ms; -- f = 4 Hz
 
   -- Declaration and Initialization of Signals --
-  signal clk_i: std_logic := '1'; -- Input Clock Signal
-  signal clk_o: std_logic := '0'; -- Output Clock Signal
+  signal clk_i: std_logic := '1'; -- Input Clock. Initialized to 1 so that output clock has even timing
+  signal clk_o: std_logic := '0'; -- Output Clock. Initialized to 0 so that FSM can immediate receive input before clk2 goes high
   signal count_o: std_logic_vector(1 downto 0) := "00";
 
   signal simulate: std_logic := '1'; -- Variable used to stop the simulation. Must be the "signal" type to be used between processes
@@ -39,7 +39,7 @@ begin
     wait; -- Suspend the test bench for analysis. Equivalent to $stop. Must be inside a process
   end process;
 
-  -- State Transition Testing --
+  -- Main Test Bench --
   process is
   begin
     wait for (2 sec - CLK_PERIOD / 2);

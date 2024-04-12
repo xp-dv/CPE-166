@@ -44,14 +44,17 @@ integer i;
 always @(bin or dp) begin
   bcd = 0;
   // Double Dabble Binary to BCD Method
-  for (i = 0; i < 12; i = i + 1) begin // Iterate once for each bit in input number
-    if (bcd[3:0] >= 5) bcd[3:0] = bcd[3:0] + 2'b11; // If any BCD digit is >= 5, add 3
+  for (i = 0; i < 12; i = i + 1) begin // Iterate for every bit in the binary input
+    // If any BCD digit is >= 5, add 3
+    if (bcd[3:0] >= 5) bcd[3:0] = bcd[3:0] + 2'b11;
     if (bcd[7:4] >= 5) bcd[7:4] = bcd[7:4] + 2'b11;
     if (bcd[11:8] >= 5) bcd[11:8] = bcd[11:8] + 2'b11;
     if (bcd[15:12] >= 5) bcd[15:12] = bcd[15:12] + 2'b11;
-    bcd = {bcd[14:0], bin[11 - i]}; // Shift one bit, and shift in proper bit from input
+    // Shift bcd left, inserting the next MSB from input
+    bcd = {bcd[14:0], bin[11 - i]};
   end
   
+  // Assign BCD Digits to Output Signals
   disp0 = hex_7seg_decoder_anode(dp, bcd[3:0]);
   disp1 = hex_7seg_decoder_anode(dp, bcd[7:4]);
   disp2 = hex_7seg_decoder_anode(dp, bcd[11:8]);
