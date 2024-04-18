@@ -1,5 +1,5 @@
 Timing Analyzer report for Lab3Part4
-Mon Apr  8 03:36:16 2024
+Thu Apr 11 15:40:10 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -99,7 +99,7 @@ https://fpgasoftware.intel.com/eula.
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processor 2            ;   1.5%      ;
+;     Processor 2            ;   1.6%      ;
 +----------------------------+-------------+
 
 
@@ -560,7 +560,7 @@ No non-DPA dedicated SERDES Receiver circuitry present in device or used in desi
 Info: *******************************************************************
 Info: Running Quartus Prime Timing Analyzer
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Mon Apr  8 03:36:14 2024
+    Info: Processing started: Thu Apr 11 15:40:08 2024
 Info: Command: quartus_sta Lab3Part4 -c Lab3Part4
 Info: qsta_default_script.tcl version: #1
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
@@ -657,9 +657,9 @@ Info (332146): Worst-case minimum pulse width slack is -3.000
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus Prime Timing Analyzer was successful. 0 errors, 4 warnings
-    Info: Peak virtual memory: 4804 megabytes
-    Info: Processing ended: Mon Apr  8 03:36:16 2024
+    Info: Peak virtual memory: 4817 megabytes
+    Info: Processing ended: Thu Apr 11 15:40:10 2024
     Info: Elapsed time: 00:00:02
-    Info: Total CPU time (on all processors): 00:00:02
+    Info: Total CPU time (on all processors): 00:00:01
 
 
