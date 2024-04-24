@@ -1,36 +1,40 @@
 module vending_machine_tb();
-reg RESET, CLK, ONE, TWO, FIVE; // Set inputs to a register to set data to them
-wire D;
-wire[2:0] R;
-wire[2:0] CS, NS;
 
-vending_machine uut (.reset(RESET), .clk(CLK), .cs(CS), .ns(NS), .one(ONE), .two(TWO), .five(FIVE), .d(D), .r(R));
+reg reset, clk, one, two, five; // Set inputs to a register to set data to them
+wire d;
+wire [2:0] r;
+wire [2:0] cs, ns;
+parameter CLK_PERIOD = 10; // 10 ps = 100 GHz
 
-initial CLK = 0;
-always #5 CLK=~CLK; // 2(5) = 10 picosecond period
+vending_machine uut (.reset(reset), .clk(clk), .cs(cs), .ns(ns), .one(one), .two(two), .five(five), .d(d), .r(r));
+
+initial clk = 1'b0;
+always #(CLK_PERIOD / 2) clk=~clk; // 2(5) = 10 picosecond period
 
 integer i, k;
 initial begin
-  // Inputs must last for a full period
-  {FIVE,TWO,ONE,RESET} = 1; #15; // The additional half-period offset is REQUIRED so each state change happens at the end of the input pulse
-  {FIVE,TWO,ONE,RESET} = 0; #10;
+  // To ensure that the rising edge of the clock signal occurs as close to the middle of the input signal as possible:
+  // All desired inputs should last for one full clock period
+  // The input signal should only ever rise or fall with the falling edge of the clock signal
+  {five,two,one,reset} = 4'b1; #10;
+  {five,two,one,reset} = 4'b0; #10;
   for (i = 0; i < 6; i = i + 1) begin
-    {FIVE,TWO,ONE} = 0; #10;
-    {FIVE,TWO,ONE} = 1; #10;
+    {five,two,one} = 3'b0; #10;
+    {five,two,one} = 3'b1; #10;
   end
   for (i = 0; i < 5; i = i + 1) begin
-    {FIVE,TWO,ONE} = 0; #10;
-    {FIVE,TWO,ONE} = 2; #10;
+    {five,two,one} = 3'b0; #10;
+    {five,two,one} = 3'b010; #10;
   end
   for (k = 0; k < 5; k = k + 1) begin
     for (i = 0; i < k; i = i + 1) begin
-      {FIVE,TWO,ONE} = 0; #10;
-      {FIVE,TWO,ONE} = 1; #10;
+      {five,two,one} = 3'b0; #10;
+      {five,two,one} = 3'b1; #10;
     end
-      {FIVE,TWO,ONE} = 0; #10;
-      {FIVE,TWO,ONE} = 4; #10;
+      {five,two,one} = 3'b0; #10;
+      {five,two,one} = 3'b100; #10;
   end
-$stop; // End RTL simulation without exiting
+$stop; // Suspend simulation
 end
 
 endmodule

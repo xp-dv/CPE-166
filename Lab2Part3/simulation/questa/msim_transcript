@@ -24,32 +24,32 @@
 # Copying C:/intelFPGA_lite/23.1std/questa_fse/win64/../modelsim.ini to modelsim.ini
 # Modifying modelsim.ini
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/XP/Documents/CPE\ 166/Lab2Part3 {C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/XP/Documents/CPE\ 166/FPGA\ Projects/Lab2Part3 {C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 20:54:47 on Mar 09,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XP/Documents/CPE 166/Lab2Part3" C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine.v 
+# Start time: 03:40:49 on Apr 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3" C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v 
 # -- Compiling module vending_machine
-# ** Warning: C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine.v(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
+# ** Warning: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v(11): (vlog-2600) [RDGN] - Redundant digits in numeric literal.
 # 
 # Top level modules:
 # 	vending_machine
-# End time: 20:54:47 on Mar 09,2024, Elapsed time: 0:00:00
+# End time: 03:40:49 on Apr 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 1
 # 
-# vlog -vlog01compat -work work +incdir+C:/Users/XP/Documents/CPE\ 166/Lab2Part3 {C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine_tb.v}
+# vlog -vlog01compat -work work +incdir+C:/Users/XP/Documents/CPE\ 166/FPGA\ Projects/Lab2Part3 {C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v}
 # Questa Intel Starter FPGA Edition-64 vlog 2023.3 Compiler 2023.07 Jul 17 2023
-# Start time: 20:54:47 on Mar 09,2024
-# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XP/Documents/CPE 166/Lab2Part3" C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine_tb.v 
+# Start time: 03:40:49 on Apr 20,2024
+# vlog -reportprogress 300 -vlog01compat -work work "+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3" C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v 
 # -- Compiling module vending_machine_tb
 # 
 # Top level modules:
 # 	vending_machine_tb
-# End time: 20:54:47 on Mar 09,2024, Elapsed time: 0:00:00
+# End time: 03:40:49 on Apr 20,2024, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # 
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs="+acc"  vending_machine_tb
 # vsim -t 1ps -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work -voptargs=""+acc"" vending_machine_tb 
-# Start time: 20:54:47 on Mar 09,2024
+# Start time: 03:40:49 on Apr 20,2024
 # ** Note: (vsim-3812) Design is being optimized...
 # ** Warning: (vopt-10587) Some optimizations are turned off because the +acc switch is in effect. This will cause your simulation to run slowly. Please use -access/-debug to maintain needed visibility.
 # ** Note: (vopt-143) Recognized 1 FSM in module "vending_machine(fast)".
@@ -63,9 +63,8 @@
 # view signals
 # .main_pane.objects.interior.cs.body.tree
 # run -all
-# ** Note: $finish    : C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine_tb.v(33)
-#    Time: 545 ps  Iteration: 0  Instance: /vending_machine_tb
-# 1
-# Break in Module vending_machine_tb at C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine_tb.v line 33
-# End time: 20:56:40 on Mar 09,2024, Elapsed time: 0:01:53
+# ** Note: $stop    : C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v(37)
+#    Time: 540 ps  Iteration: 0  Instance: /vending_machine_tb
+# Break in Module vending_machine_tb at C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v line 37
+# End time: 03:50:25 on Apr 20,2024, Elapsed time: 0:09:36
 # Errors: 0, Warnings: 1
