@@ -1,5 +1,5 @@
 Assembler report for Lab2Part3
-Sat Mar  9 20:54:33 2024
+Sat Apr 20 03:40:37 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -10,7 +10,7 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   2. Assembler Summary
   3. Assembler Settings
   4. Assembler Generated Files
-  5. Assembler Device Options: C:/Users/XP/Documents/CPE 166/Lab2Part3/output_files/Lab2Part3.sof
+  5. Assembler Device Options: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/output_files/Lab2Part3.sof
   6. Assembler Messages
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Sat Mar  9 20:54:33 2024 ;
+; Assembler Status      ; Successful - Sat Apr 20 03:40:37 2024 ;
 ; Revision Name         ; Lab2Part3                             ;
 ; Top-level Entity Name ; vending_machine                       ;
 ; Family                ; MAX 10                                ;
@@ -53,23 +53,23 @@ https://fpgasoftware.intel.com/eula.
 +--------+---------+---------------+
 
 
-+--------------------------------------------------------------------+
-; Assembler Generated Files                                          ;
-+--------------------------------------------------------------------+
-; File Name                                                          ;
-+--------------------------------------------------------------------+
-; C:/Users/XP/Documents/CPE 166/Lab2Part3/output_files/Lab2Part3.sof ;
-+--------------------------------------------------------------------+
++----------------------------------------------------------------------------------+
+; Assembler Generated Files                                                        ;
++----------------------------------------------------------------------------------+
+; File Name                                                                        ;
++----------------------------------------------------------------------------------+
+; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/output_files/Lab2Part3.sof ;
++----------------------------------------------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------+
-; Assembler Device Options: C:/Users/XP/Documents/CPE 166/Lab2Part3/output_files/Lab2Part3.sof ;
-+----------------+-----------------------------------------------------------------------------+
-; Option         ; Setting                                                                     ;
-+----------------+-----------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0027206C                                                                  ;
-; Checksum       ; 0x0027206C                                                                  ;
-+----------------+-----------------------------------------------------------------------------+
++------------------------------------------------------------------------------------------------------------+
+; Assembler Device Options: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/output_files/Lab2Part3.sof ;
++----------------+-------------------------------------------------------------------------------------------+
+; Option         ; Setting                                                                                   ;
++----------------+-------------------------------------------------------------------------------------------+
+; JTAG usercode  ; 0x0027206C                                                                                ;
+; Checksum       ; 0x0027206C                                                                                ;
++----------------+-------------------------------------------------------------------------------------------+
 
 
 +--------------------+
@@ -78,14 +78,13 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Mar  9 20:54:30 2024
+    Info: Processing started: Sat Apr 20 03:40:34 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Lab2Part3 -c Lab2Part3
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
-Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4717 megabytes
-    Info: Processing ended: Sat Mar  9 20:54:33 2024
+Info: Quartus Prime Assembler was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4713 megabytes
+    Info: Processing ended: Sat Apr 20 03:40:37 2024
     Info: Elapsed time: 00:00:03
     Info: Total CPU time (on all processors): 00:00:02
 

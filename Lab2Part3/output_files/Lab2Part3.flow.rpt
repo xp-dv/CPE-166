@@ -1,5 +1,5 @@
 Flow report for Lab2Part3
-Sat Mar  9 20:54:38 2024
+Sat Apr 20 03:40:41 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,7 +41,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sat Mar  9 20:54:38 2024          ;
+; Flow Status                        ; Successful - Sat Apr 20 03:40:41 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab2Part3                                      ;
 ; Top-level Entity Name              ; vending_machine                                ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 03/09/2024 20:54:06 ;
+; Start date & time ; 04/20/2024 03:40:13 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab2Part3           ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name     ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-----------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 52230099337.171004644606576            ; --            ; --              ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 52230099337.171360961304532            ; --            ; --              ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --              ; vending_machine_tb                ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --              ; eda_board_design_timing           ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --              ; eda_board_design_boundary_scan    ;
@@ -94,6 +94,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --              ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --              ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --              ; --                                ;
+; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --              ; --                                ;
 ; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; vending_machine ; Top                               ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; vending_machine ; Top                               ;
 ; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; vending_machine ; Top                               ;
@@ -109,12 +110,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4721 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:14     ; 1.0                     ; 5359 MB             ; 00:00:10                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4716 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4809 MB             ; 00:00:02                           ;
-; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 4642 MB             ; 00:00:00                           ;
-; Total                ; 00:00:29     ; --                      ; --                  ; 00:00:25                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4742 MB             ; 00:00:11                           ;
+; Fitter               ; 00:00:11     ; 1.0                     ; 5325 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4712 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4805 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4642 MB             ; 00:00:00                           ;
+; Total                ; 00:00:24     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

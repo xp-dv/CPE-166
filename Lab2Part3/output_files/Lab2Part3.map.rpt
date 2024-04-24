@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab2Part3
-Sat Mar  9 20:54:14 2024
+Sat Apr 20 03:40:21 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -44,7 +44,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat Mar  9 20:54:14 2024          ;
+; Analysis & Synthesis Status        ; Successful - Sat Apr 20 03:40:21 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab2Part3                                      ;
 ; Top-level Entity Name              ; vending_machine                                ;
@@ -71,6 +71,7 @@ https://fpgasoftware.intel.com/eula.
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
 ; Top-level entity name                                            ; vending_machine    ; Lab2Part3          ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
+; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
 ; Enable compact report table                                      ; Off                ; Off                ;
@@ -166,13 +167,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                            ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                              ; Library ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
-; vending_machine.v                ; yes             ; User Verilog HDL File  ; C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine.v ;         ;
-+----------------------------------+-----------------+------------------------+-----------------------------------------------------------+---------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                          ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type              ; File Name with Absolute Path                                            ; Library ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
+; vending_machine.v                ; yes             ; User Verilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v ;         ;
++----------------------------------+-----------------+------------------------+-------------------------------------------------------------------------+---------+
 
 
 +----------------------------------------------------------+
@@ -280,14 +281,13 @@ Note: In order to hide this table in the UI and the text report file, please set
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Sat Mar  9 20:54:06 2024
+    Info: Processing started: Sat Apr 20 03:40:13 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab2Part3 -c Lab2Part3
-Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
 Info (12021): Found 1 design units, including 1 entities, in source file vending_machine.v
-    Info (12023): Found entity 1: vending_machine File: C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine.v Line: 1
+    Info (12023): Found entity 1: vending_machine File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file vending_machine_tb.v
-    Info (12023): Found entity 1: vending_machine_tb File: C:/Users/XP/Documents/CPE 166/Lab2Part3/vending_machine_tb.v Line: 1
+    Info (12023): Found entity 1: vending_machine_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v Line: 1
 Info (12127): Elaborating entity "vending_machine" for the top level hierarchy
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
@@ -296,9 +296,9 @@ Info (21057): Implemented 34 device resources after synthesis - the final resour
     Info (21058): Implemented 5 input pins
     Info (21059): Implemented 10 output pins
     Info (21061): Implemented 19 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4734 megabytes
-    Info: Processing ended: Sat Mar  9 20:54:14 2024
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+    Info: Peak virtual memory: 4746 megabytes
+    Info: Processing ended: Sat Apr 20 03:40:21 2024
     Info: Elapsed time: 00:00:08
     Info: Total CPU time (on all processors): 00:00:11
 
