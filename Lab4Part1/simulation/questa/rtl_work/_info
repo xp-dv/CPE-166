@@ -5,6 +5,8 @@ Z0 !s12c _opt
 Z1 !s99 nomlopt
 R0
 R1
+R0
+R1
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -14,60 +16,160 @@ R1
 cModel Technology
 Z2 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/simulation/questa
 T_opt
-!s110 1713607737
-VK;9afJ0HRSBU<5l>Ni:D80
-04 6 4 work alu_tb fast 0
-=2-000c29281189-66239439-48-1d58
+!s110 1714034281
+VL>1bhfhm?lDZi;hio0oM`1
+04 11 4 work datapath_tb fast 0
+=5-000c29281189-662a1668-391-11b4
 R1
 !s12b OEM100
-!s124 OEM10U2 
+!s124 OEM10U11 
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
 Z3 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 valu
 2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v
-!s110 1713607732
+!s110 1714033144
 !i10b 1
-!s100 bGDF24>OcfD7dPRb@d6Mb0
-ICBl19095PzfkzVRdiZdee3
+!s100 >TQnd;0^zMkeBmbDRPgkH3
+IM^[Hbn:bE;DfIzzDW232:1
 R2
-w1713607460
+w1714027609
 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v
 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v
-!i122 2
-Z4 L0 2 22
-Z5 VDg1SIo80bB@j0V0VzS_@n1
-Z6 OL;L;2023.3;77
+!i122 3
+L0 2 23
+Z4 VDg1SIo80bB@j0V0VzS_@n1
+Z5 OL;L;2023.3;77
 r1
 !s85 0
 31
-!s108 1713607731.000000
+Z6 !s108 1714033143.000000
 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v|
-!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu.v|
 !i113 0
-Z7 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R3
-valu_tb
-2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu_tb.v
-!s110 1713607733
+vdatapath
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath.sv
+Z9 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1714034275
 !i10b 1
-!s100 >J?CW0PS^X3zihE0zH4F<2
-I>mlWN7J>j5d[RS7ZH[QLC3
+!s100 <aDzc;X6gOQNYnZ8YBg`k1
+Ib8Ec3bXNWB2XeGFBG0gB>1
+S1
 R2
-w1713607720
-8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu_tb.v
-FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu_tb.v
-!i122 3
+w1714034233
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath.sv
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath.sv
+!i122 7
+L0 2 28
 R4
 R5
-R6
 r1
 !s85 0
 31
-!s108 1713607733.000000
-!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu_tb.v|
-!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/alu_tb.v|
+Z10 !s108 1714034275.000000
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath.sv|
+!i113 0
+Z11 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vdatapath_tb
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath_tb.sv
+R9
+!s110 1714034276
+!i10b 1
+!s100 aM3LXMf>8TIDT5P4?Li:l3
+I8]`TXH]linYR@dG:65[H?1
+S1
+R2
+w1714032915
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath_tb.sv
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath_tb.sv
+!i122 8
+L0 2 77
+R4
+R5
+r1
+!s85 0
+31
+R10
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/datapath_tb.sv|
+!i113 0
+R11
+R3
+vdff4_ce
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/dff4_ce.v
+Z12 !s110 1714033143
+!i10b 1
+!s100 V=?NNf[VZAFM3@1TJf7=;1
+ILg3[eWR2UQbci]D;Y]Z]T0
+R2
+w1714032409
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/dff4_ce.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/dff4_ce.v
+!i122 2
+L0 2 14
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/dff4_ce.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/dff4_ce.v|
 !i113 0
 R7
+R8
+R3
+vmux4_2to1
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_2to1.v
+R12
+!i10b 1
+!s100 hGWbK:3HG>>P1BR>BiJ=[3
+INm5a=M9b_dB`V<N0V3K5T0
+R2
+w1713599123
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_2to1.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_2to1.v
+!i122 1
+Z13 L0 2 9
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_2to1.v|
+!i113 0
+R7
+R8
+R3
+vmux4_4to1
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_4to1.v
+R12
+!i10b 1
+!s100 fBlBmWG63DoOn8L1aBl;42
+I7NmKOm4a>HJKED[XU2d`53
+R2
+w1713599100
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_4to1.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_4to1.v
+!i122 0
+R13
+R4
+R5
+r1
+!s85 0
+31
+R6
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_4to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4Part1/mux4_4to1.v|
+!i113 0
+R7
+R8
 R3
