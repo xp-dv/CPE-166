@@ -1,15 +1,15 @@
-Fitter Status : Successful - Sat Apr 20 03:40:33 2024
+Fitter Status : Successful - Thu Apr 25 16:15:47 2024
 Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 Revision Name : Lab2Part3
 Top-level Entity Name : vending_machine
 Family : MAX 10
 Device : 10M50DAF484C7G
 Timing Models : Final
-Total logic elements : 17 / 49,760 ( < 1 % )
-    Total combinational functions : 17 / 49,760 ( < 1 % )
-    Dedicated logic registers : 3 / 49,760 ( < 1 % )
-Total registers : 3
-Total pins : 15 / 360 ( 4 % )
+Total logic elements : 20 / 49,760 ( < 1 % )
+    Total combinational functions : 20 / 49,760 ( < 1 % )
+    Dedicated logic registers : 5 / 49,760 ( < 1 % )
+Total registers : 5
+Total pins : 9 / 360 ( 3 % )
 Total virtual pins : 0
 Total memory bits : 0 / 1,677,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 288 ( 0 % )

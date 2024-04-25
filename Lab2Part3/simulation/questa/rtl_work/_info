@@ -1,8 +1,10 @@
 m255
 K4
 z2
-!s12c _opt
-Z0 !s99 nomlopt
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
 !s11f vlog 2023.3 2023.07, Jul 17 2023
 13
 !s112 1.1
@@ -10,64 +12,62 @@ Z0 !s99 nomlopt
 !i10e 25
 !i10f 100
 cModel Technology
-Z1 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/simulation/questa
+Z2 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/simulation/questa
 T_opt
-!s110 1713609650
-V^d3d9P3I2P`2WHUTQgnRM3
+!s110 1714087390
+Vd[WD>In<_Fb_>aRDC3DY@1
 04 18 4 work vending_machine_tb fast 0
-=1-000c29281189-66239bb1-329-3d0
-R0
+=3-000c29281189-662ae5dd-313-e54
+R1
 !s12b OEM100
 !s124 OEM10U2 
 o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
-Z2 tCvgOpt 0
+Z3 tCvgOpt 0
 n@_opt
 OL;O;2023.3;77
 vvending_machine
 2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v
-Z3 !s110 1713609649
+Z4 !s110 1714087386
 !i10b 1
-!s100 AV;OFFKdo;Qg6m[ORVGn52
-Il_DaUnUc9OCXKeQW[[@Y00
-R1
-w1712875079
+!s100 >eb?84I7PYJ7h^488[azP0
+IYd12]n=FMJeokZ6>AB1z;1
+R2
+w1714086879
 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v
 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v
-!i122 0
-L0 1 119
-Z4 VDg1SIo80bB@j0V0VzS_@n1
-Z5 OL;L;2023.3;77
+!i122 2
+L0 1 120
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
 r1
 !s85 0
 31
-Z6 !s108 1713609649.000000
+Z7 !s108 1714087386.000000
 !s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine.v|
 !i113 0
-Z7 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-Z8 !s92 -vlog01compat -work work {+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
-R2
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
 vvending_machine_tb
 2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v
-R3
+R4
 !i10b 1
-!s100 dK8VhJ^ZEF3b<[0=`0d8D0
-Ij>J8[gaQOgZ6UB?]^9=D<1
-R1
-w1713609609
+!s100 Z54RA`6_:i;KV`g`a;?GA2
+IB;Sl9H;@;GH4<J510=zIS0
+R2
+w1714087163
 8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v
 FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v
-!i122 1
-L0 1 40
-R4
+!i122 3
+L0 1 39
 R5
+R6
 r1
 !s85 0
 31
-R6
-!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v|
-!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v|
-!i113 0
 R7
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab2Part3/vending_machine_tb.v|
+!i113 0
 R8
-R2
+R3
