@@ -1,0 +1,165 @@
+Flow report for Lab4
+Thu Apr 25 15:59:11 2024
+Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+
+
+---------------------
+; Table of Contents ;
+---------------------
+  1. Legal Notice
+  2. Flow Summary
+  3. Flow Settings
+  4. Flow Non-Default Global Settings
+  5. Flow Elapsed Time
+  6. Flow OS Summary
+  7. Flow Log
+  8. Flow Messages
+  9. Flow Suppressed Messages
+
+
+
+----------------
+; Legal Notice ;
+----------------
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+
+
+
++-------------------------------------------------------------------------------------+
+; Flow Summary                                                                        ;
++------------------------------------+------------------------------------------------+
+; Flow Status                        ; Successful - Thu Apr 25 15:59:11 2024          ;
+; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
+; Revision Name                      ; Lab4                                           ;
+; Top-level Entity Name              ; datapath                                       ;
+; Family                             ; MAX 10                                         ;
+; Device                             ; 10M50DAF484C7G                                 ;
+; Timing Models                      ; Final                                          ;
+; Total logic elements               ; 44 / 49,760 ( < 1 % )                          ;
+;     Total combinational functions  ; 40 / 49,760 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 16 / 49,760 ( < 1 % )                          ;
+; Total registers                    ; 16                                             ;
+; Total pins                         ; 39 / 360 ( 11 % )                              ;
+; Total virtual pins                 ; 0                                              ;
+; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
+; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
+; Total PLLs                         ; 0 / 4 ( 0 % )                                  ;
+; UFM blocks                         ; 0 / 1 ( 0 % )                                  ;
+; ADC blocks                         ; 0 / 2 ( 0 % )                                  ;
++------------------------------------+------------------------------------------------+
+
+
++-----------------------------------------+
+; Flow Settings                           ;
++-------------------+---------------------+
+; Option            ; Setting             ;
++-------------------+---------------------+
+; Start date & time ; 04/25/2024 15:58:44 ;
+; Main task         ; Compilation         ;
+; Revision Name     ; Lab4                ;
++-------------------+---------------------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                                                ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+; COMPILER_SIGNATURE_ID                ; 52230099337.171408592401052            ; --            ; --          ; --                                ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_2to1_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fsm_tb                            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; datapath_tb                       ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; dff4_ce_tb                        ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_tb                            ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_4to1_tb                      ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_timing           ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
+; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; datapath_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
+; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --          ; --                                ;
+; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_FILE                  ; mux4_2to1_tb.v                         ; --            ; --          ; mux4_2to1_tb                      ;
+; EDA_TEST_BENCH_FILE                  ; fsm_tb.sv                              ; --            ; --          ; fsm_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; datapath_tb.sv                         ; --            ; --          ; datapath_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; dff4_ce_tb.v                           ; --            ; --          ; dff4_ce_tb                        ;
+; EDA_TEST_BENCH_FILE                  ; alu_tb.v                               ; --            ; --          ; alu_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; mux4_4to1_tb.v                         ; --            ; --          ; mux4_4to1_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux4_2to1_tb                           ; --            ; --          ; mux4_2to1_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fsm_tb                                 ; --            ; --          ; fsm_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; datapath_tb                            ; --            ; --          ; datapath_tb                       ;
+; EDA_TEST_BENCH_MODULE_NAME           ; dff4_ce_tb                             ; --            ; --          ; dff4_ce_tb                        ;
+; EDA_TEST_BENCH_MODULE_NAME           ; alu_tb                                 ; --            ; --          ; alu_tb                            ;
+; EDA_TEST_BENCH_MODULE_NAME           ; mux4_4to1_tb                           ; --            ; --          ; mux4_4to1_tb                      ;
+; EDA_TEST_BENCH_NAME                  ; mux4_2to1_tb                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; mux4_4to1_tb                           ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; dff4_ce_tb                             ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; alu_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; datapath_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fsm_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
+; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
+; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
+; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --          ; --                                ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
+; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
+; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; datapath                               ; Lab4          ; --          ; --                                ;
++--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------------+
+; Flow Elapsed Time                                                                                                        ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4727 MB             ; 00:00:11                           ;
+; Fitter               ; 00:00:10     ; 1.0                     ; 5326 MB             ; 00:00:10                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4727 MB             ; 00:00:02                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4795 MB             ; 00:00:02                           ;
+; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4633 MB             ; 00:00:00                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:25                           ;
++----------------------+--------------+-------------------------+---------------------+------------------------------------+
+
+
++------------------------------------------------------------------------------------+
+; Flow OS Summary                                                                    ;
++----------------------+------------------+------------+------------+----------------+
+; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
++----------------------+------------------+------------+------------+----------------+
+; Analysis & Synthesis ; X                ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; X                ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; X                ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; X                ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; X                ; Windows 10 ; 10.0       ; x86_64         ;
++----------------------+------------------+------------+------------+----------------+
+
+
+------------
+; Flow Log ;
+------------
+quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
+quartus_fit --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_asm --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+quartus_sta Lab4 -c Lab4
+quartus_eda --read_settings_files=off --write_settings_files=off Lab4 -c Lab4
+
+
+

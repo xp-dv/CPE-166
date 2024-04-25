@@ -1,0 +1,174 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/simulation/questa
+T_opt
+!s110 1714086333
+VHgj]II7d=DaTA5ZeFWzz`0
+04 11 4 work datapath_tb fast 0
+=3-000c29281189-662ae1bd-1e7-508
+R1
+!s12b OEM100
+!s124 OEM10U11 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+valu
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v
+Z4 !s110 1714085959
+!i10b 1
+!s100 >TQnd;0^zMkeBmbDRPgkH3
+IH]MBDXaQF2hnc_aOZM@Ok0
+R2
+w1714036461
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v
+!i122 0
+L0 2 23
+Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z6 OL;L;2023.3;77
+r1
+!s85 0
+31
+Z7 !s108 1714085959.000000
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v|
+!i113 0
+Z8 o-vlog01compat -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z9 !s92 -vlog01compat -work work {+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vdatapath
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv
+Z10 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+Z11 !s110 1714085960
+!i10b 1
+!s100 jCI40G]nf]NZHdJRM75em0
+I7l0jQg>;EJ7DVc7[YC2053
+S1
+R2
+w1714044978
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv
+!i122 4
+L0 2 28
+R5
+R6
+r1
+!s85 0
+31
+Z12 !s108 1714085960.000000
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work {+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vdatapath_tb
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath_tb.sv
+R10
+!s110 1714086330
+!i10b 1
+!s100 bREOf4iI<Y`7jn92Bj@k11
+IfQZbK_`[NQQgN0Dg0a=eL2
+S1
+R2
+w1714086316
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath_tb.sv
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath_tb.sv
+!i122 6
+L0 15 90
+R5
+R6
+r1
+!s85 0
+31
+!s108 1714086329.000000
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath_tb.sv|
+!i113 0
+o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vdff4_ce
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v
+R4
+!i10b 1
+!s100 I]Ke8inG6@ZViAY7C3m6^0
+ITOV;Md[G6oh<8z243VQhd2
+R2
+w1714044911
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v
+!i122 1
+L0 2 14
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v|
+!i113 0
+R8
+R9
+R3
+vmux4_2to1
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v
+R11
+!i10b 1
+!s100 hGWbK:3HG>>P1BR>BiJ=[3
+Io0D`B2_=<?XZ3fj_PLR`H2
+R2
+w1713599123
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v
+!i122 3
+Z13 L0 2 9
+R5
+R6
+r1
+!s85 0
+31
+R12
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v|
+!i113 0
+R8
+R9
+R3
+vmux4_4to1
+2C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v
+R11
+!i10b 1
+!s100 fBlBmWG63DoOn8L1aBl;42
+Imj4_V>]>:6SXWAAaR0dGa2
+R2
+w1713599100
+8C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v
+FC:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v
+!i122 2
+R13
+R5
+R6
+r1
+!s85 0
+31
+R7
+!s107 C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v|
+!s90 -reportprogress|300|-vlog01compat|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4|C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v|
+!i113 0
+R8
+R9
+R3
