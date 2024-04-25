@@ -1,0 +1,8 @@
+
+State Machine - |vending_machine|cs
+Name cs.cents3 cs.cents2 cs.cents1 cs.cents0 cs.cents4 
+cs.cents0 0 0 0 0 0 
+cs.cents1 0 0 1 1 0 
+cs.cents2 0 1 0 1 0 
+cs.cents3 1 0 0 1 0 
+cs.cents4 0 0 0 1 1 

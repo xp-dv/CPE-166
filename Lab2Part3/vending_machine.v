@@ -1,14 +1,15 @@
 module vending_machine(
   input clk, reset, one, two, five,
   output reg d, // Dispense Drink. Activated when machine contains 5 cents or more
-  output reg [2:0] r = 0, // Coin Return. Max coin return is 4 cents. Drinks cost 5 cents
-  output reg [2:0] cs, ns // Current State and Next State
+  output reg [2:0] r = 0 // Coin Return. Max coin return is 4 cents. Drinks cost 5 cents
 );
 
 // State Definitions. cents# = cents fed to machine. ret# = coins to return
 // Use the bit-specifying binary format instead of typing a decimal number in the state definitions
-// This relieves the compiler from having to truncate full-size decimal integers into 3-bit integers which will give less compiler warnings
+// which relieves the compiler from having to truncate full-size decimal integers into 3-bit integers.
+// Typedef Enum is a better method for defining state names and the state registers, but it is only supported in SystemVerilog
 parameter cents0 = 3'b000, cents1 = 3'b001, cents2 = 3'b010, cents3 = 3'b0011, cents4 = 3'b100;
+reg [2:0] cs, ns; // Current State and Next State
 
 /* State Combinational Logic */
 always @(cs or one or two or five) begin // Mealy State Machine

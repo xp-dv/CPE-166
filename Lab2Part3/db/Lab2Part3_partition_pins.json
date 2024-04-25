@@ -20,27 +20,7 @@
 					"strict" : false
 				},
 				{
-					"name" : "cs[0]",
-					"strict" : false
-				},
-				{
-					"name" : "cs[1]",
-					"strict" : false
-				},
-				{
-					"name" : "cs[2]",
-					"strict" : false
-				},
-				{
-					"name" : "ns[0]",
-					"strict" : false
-				},
-				{
-					"name" : "ns[1]",
-					"strict" : false
-				},
-				{
-					"name" : "ns[2]",
+					"name" : "two",
 					"strict" : false
 				},
 				{
@@ -49,10 +29,6 @@
 				},
 				{
 					"name" : "one",
-					"strict" : false
-				},
-				{
-					"name" : "two",
 					"strict" : false
 				},
 				{
