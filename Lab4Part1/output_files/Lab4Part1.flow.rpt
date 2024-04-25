@@ -1,5 +1,5 @@
 Flow report for Lab4Part1
-Sat Apr 20 03:04:46 2024
+Thu Apr 25 04:56:18 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Sat Apr 20 03:04:46 2024          ;
+; Flow Status                        ; Successful - Thu Apr 25 04:56:18 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab4Part1                                      ;
-; Top-level Entity Name              ; alu                                            ;
+; Top-level Entity Name              ; fsm                                            ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
-; Total logic elements               ; 24 / 49,760 ( < 1 % )                          ;
-;     Total combinational functions  ; 24 / 49,760 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 0 / 49,760 ( 0 % )                             ;
-; Total registers                    ; 0                                              ;
-; Total pins                         ; 16 / 360 ( 4 % )                               ;
+; Total logic elements               ; 9 / 49,760 ( < 1 % )                           ;
+;     Total combinational functions  ; 7 / 49,760 ( < 1 % )                           ;
+;     Dedicated logic registers      ; 6 / 49,760 ( < 1 % )                           ;
+; Total registers                    ; 6                                              ;
+; Total pins                         ; 15 / 360 ( 4 % )                               ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/20/2024 03:04:23 ;
+; Start date & time ; 04/25/2024 04:55:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4Part1           ;
 +-------------------+---------------------+
@@ -78,8 +78,9 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 52230099337.171360746308696            ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 52230099337.171404615104380            ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_2to1_tb                      ;
+; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fsm_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; datapath_tb                       ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; dff4_ce_tb                        ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; alu_tb                            ;
@@ -88,16 +89,18 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; alu_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; fsm_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_FILE                  ; mux4_2to1_tb.v                         ; --            ; --          ; mux4_2to1_tb                      ;
-; EDA_TEST_BENCH_FILE                  ; datapath_tb.v                          ; --            ; --          ; datapath_tb                       ;
+; EDA_TEST_BENCH_FILE                  ; fsm_tb.sv                              ; --            ; --          ; fsm_tb                            ;
+; EDA_TEST_BENCH_FILE                  ; datapath_tb.sv                         ; --            ; --          ; datapath_tb                       ;
 ; EDA_TEST_BENCH_FILE                  ; dff4_ce_tb.v                           ; --            ; --          ; dff4_ce_tb                        ;
 ; EDA_TEST_BENCH_FILE                  ; alu_tb.v                               ; --            ; --          ; alu_tb                            ;
 ; EDA_TEST_BENCH_FILE                  ; mux4_4to1_tb.v                         ; --            ; --          ; mux4_4to1_tb                      ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; mux4_2to1_tb                           ; --            ; --          ; mux4_2to1_tb                      ;
+; EDA_TEST_BENCH_MODULE_NAME           ; fsm_tb                                 ; --            ; --          ; fsm_tb                            ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; datapath_tb                            ; --            ; --          ; datapath_tb                       ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; dff4_ce_tb                             ; --            ; --          ; dff4_ce_tb                        ;
 ; EDA_TEST_BENCH_MODULE_NAME           ; alu_tb                                 ; --            ; --          ; alu_tb                            ;
@@ -107,17 +110,18 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_TEST_BENCH_NAME                  ; mux4_4to1_tb                           ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; dff4_ce_tb                             ; --            ; --          ; eda_simulation                    ;
 ; EDA_TEST_BENCH_NAME                  ; alu_tb                                 ; --            ; --          ; eda_simulation                    ;
+; EDA_TEST_BENCH_NAME                  ; fsm_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_TIME_SCALE                       ; 1 ps                                   ; --            ; --          ; eda_simulation                    ;
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; alu         ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; fsm         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; fsm         ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; fsm         ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; alu                                    ; Lab4Part1     ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; fsm                                    ; Lab4Part1     ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -126,12 +130,12 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4727 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:06     ; 1.0                     ; 5353 MB             ; 00:00:06                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4712 MB             ; 00:00:02                           ;
+; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4727 MB             ; 00:00:12                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5359 MB             ; 00:00:08                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4730 MB             ; 00:00:02                           ;
 ; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4805 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4642 MB             ; 00:00:00                           ;
-; Total                ; 00:00:19     ; --                      ; --                  ; 00:00:21                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:24                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

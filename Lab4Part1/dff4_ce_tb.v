@@ -1,9 +1,9 @@
 /* 4-bit D Flip-Flop with Clock Enable and Asynchronous Clear Test Bench */
 module dff4_ce_tb();
 
-reg clr, ce, clk; // Clear, Clock Enable, Clock
-reg [3:0] d; // Data in
-wire [3:0] q; // Data out
+reg clk, clr, ce;
+reg [3:0] d;
+wire [3:0] q;
 parameter CLK_PERIOD = 20000; // 20000 ps = 20 ns = 50 MHz
 
 dff4_ce uut (.d(d), .clr(clr), .ce(ce), .clk(clk), .q(q));

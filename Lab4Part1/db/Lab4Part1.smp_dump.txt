@@ -1,0 +1,9 @@
+
+State Machine - |fsm|cs
+Name cs.OP_MOV_R2_A cs.OP_SBC_R1 cs.OP_MOV_A_R0 cs.OP_MOV_RX_MX cs.IDLE cs.CLEAR 
+cs.CLEAR 0 0 0 0 0 0 
+cs.IDLE 0 0 0 0 1 1 
+cs.OP_MOV_RX_MX 0 0 0 1 0 1 
+cs.OP_MOV_A_R0 0 0 1 0 0 1 
+cs.OP_SBC_R1 0 1 0 0 0 1 
+cs.OP_MOV_R2_A 1 0 0 0 0 1 

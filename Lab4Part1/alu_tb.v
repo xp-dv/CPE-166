@@ -15,7 +15,7 @@ initial begin
   b = 4'hA;
   cin = 1'b1;
   for (i = 0; i < 8; i = i + 1) begin // 2^(3) = 8 iterations
-    {s} = i; #CLK_PERIOD;
+    s = i; #CLK_PERIOD;
   end
 $stop; // Suspend simulation
 end
