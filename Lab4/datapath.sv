@@ -1,14 +1,13 @@
 /* Microprocessor Datapath */
 module datapath(
   input logic clk, clr_i, cin_i, // Clock, Clear, Carry In
-  input logic [3:0] m_i [2:0], // 3×4 User Data Input
+  input logic [3:0] m_i [2:0], // 3×4 Input Data
   input logic [3:0] ce_i, // Clock Enable
-  input logic [2:0] w_i, // 2to1 Mux Selector
-  input logic [1:0] sel_i, // 4to1 Mux Selector
+  input logic [2:0] w_i, // RX Registers Mux Selector
+  input logic [1:0] sel_i, // ALU Input B Mux Selector
   input logic [2:0] s_i, // ALU Operation Select (Opcode)
-  output logic [3:0] r_q [2:0] // 3×4 memory block
+  output logic [3:0] r_q [2:0] // 3×4 Output Memory
 );
-
 logic [3:0] y_d [3:0];
 logic [3:0] b_io, a_q;
 
