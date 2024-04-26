@@ -23,7 +23,7 @@ logic [2:0] w_io; // RX Registers Mux Selector
 logic [1:0] sel_io; // ALU Input B Mux Selector
 logic [2:0] s_io; // ALU Operation Select (Opcode)
 
-datapath datapath_block(.clk(clk), .clr_i(clr_io), .cin_i(cin_i), .m_i(m_i), .ce_i(ce_io), .w_i(w_io), .sel_i(sel_io), .s_i(s_io), .r_q(r_q));
-fsm fsm_block(.clk(clk), .reset(reset), .clr_o(clr_io), .ce_o(ce_io), .w_o(w_io), .sel_o(sel_io), .s_o(s_io));
+datapath datapath(.clk(clk), .clr_i(clr_io), .cin_i(cin_i), .m_i(m_i), .ce_i(ce_io), .w_i(w_io), .sel_i(sel_io), .s_i(s_io), .r_q(r_q));
+fsm fsm(.clk(clk), .reset(reset), .clr_o(clr_io), .ce_o(ce_io), .w_o(w_io), .sel_o(sel_io), .s_o(s_io));
 
 endmodule
