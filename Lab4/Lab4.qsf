@@ -39,7 +39,7 @@
 
 set_global_assignment -name FAMILY "MAX 10"
 set_global_assignment -name DEVICE 10M50DAF484C7G
-set_global_assignment -name TOP_LEVEL_ENTITY datapath
+set_global_assignment -name TOP_LEVEL_ENTITY top
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 23.1STD.0
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "14:11:31  APRIL 25, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "23.1std.0 Lite Edition"
@@ -59,7 +59,7 @@ set_global_assignment -name POWER_BOARD_THERMAL_MODEL "NONE (CONSERVATIVE)"
 set_global_assignment -name TIMING_ANALYZER_MULTICORNER_ANALYSIS ON
 set_global_assignment -name NUM_PARALLEL_PROCESSORS ALL
 set_global_assignment -name EDA_TEST_BENCH_ENABLE_STATUS TEST_BENCH_MODE -section_id eda_simulation
-set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH datapath_tb -section_id eda_simulation
+set_global_assignment -name EDA_NATIVELINK_SIMULATION_TEST_BENCH fsm_tb -section_id eda_simulation
 set_global_assignment -name EDA_TEST_BENCH_NAME mux4_2to1_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id mux4_2to1_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME mux4_2to1_tb -section_id mux4_2to1_tb
@@ -78,6 +78,9 @@ set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME datapath_tb -section_id d
 set_global_assignment -name EDA_TEST_BENCH_NAME fsm_tb -section_id eda_simulation
 set_global_assignment -name EDA_DESIGN_INSTANCE_NAME NA -section_id fsm_tb
 set_global_assignment -name EDA_TEST_BENCH_MODULE_NAME fsm_tb -section_id fsm_tb
+set_global_assignment -name SYSTEMVERILOG_FILE top.sv
+set_global_assignment -name SYSTEMVERILOG_FILE hex_7seg_decoder_anode.sv
+set_global_assignment -name SYSTEMVERILOG_FILE mpu.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fsm_tb.sv
 set_global_assignment -name SYSTEMVERILOG_FILE fsm.sv
 set_global_assignment -name SYSTEMVERILOG_FILE datapath_tb.sv
@@ -99,4 +102,39 @@ set_global_assignment -name EDA_TEST_BENCH_FILE dff4_ce_tb.v -section_id dff4_ce
 set_global_assignment -name EDA_TEST_BENCH_FILE alu_tb.v -section_id alu_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE datapath_tb.sv -section_id datapath_tb
 set_global_assignment -name EDA_TEST_BENCH_FILE fsm_tb.sv -section_id fsm_tb
+set_location_assignment PIN_C10 -to m_i[0][0]
+set_location_assignment PIN_C11 -to m_i[0][1]
+set_location_assignment PIN_D12 -to m_i[0][2]
+set_location_assignment PIN_C12 -to m_i[0][3]
+set_location_assignment PIN_A12 -to m_i[1][0]
+set_location_assignment PIN_B12 -to m_i[1][1]
+set_location_assignment PIN_A13 -to m_i[1][2]
+set_location_assignment PIN_A14 -to m_i[1][3]
+set_location_assignment PIN_B14 -to cin_i
+set_location_assignment PIN_P11 -to clk
+set_location_assignment PIN_F15 -to reset
+set_location_assignment PIN_C14 -to seg_out[0][0]
+set_location_assignment PIN_E15 -to seg_out[0][1]
+set_location_assignment PIN_C15 -to seg_out[0][2]
+set_location_assignment PIN_C16 -to seg_out[0][3]
+set_location_assignment PIN_E16 -to seg_out[0][4]
+set_location_assignment PIN_D17 -to seg_out[0][5]
+set_location_assignment PIN_C17 -to seg_out[0][6]
+set_location_assignment PIN_D15 -to seg_out[0][7]
+set_location_assignment PIN_C18 -to seg_out[1][0]
+set_location_assignment PIN_D18 -to seg_out[1][1]
+set_location_assignment PIN_E18 -to seg_out[1][2]
+set_location_assignment PIN_B16 -to seg_out[1][3]
+set_location_assignment PIN_A17 -to seg_out[1][4]
+set_location_assignment PIN_A18 -to seg_out[1][5]
+set_location_assignment PIN_B17 -to seg_out[1][6]
+set_location_assignment PIN_A16 -to seg_out[1][7]
+set_location_assignment PIN_B20 -to seg_out[2][0]
+set_location_assignment PIN_A20 -to seg_out[2][1]
+set_location_assignment PIN_B19 -to seg_out[2][2]
+set_location_assignment PIN_A21 -to seg_out[2][3]
+set_location_assignment PIN_B21 -to seg_out[2][4]
+set_location_assignment PIN_C22 -to seg_out[2][5]
+set_location_assignment PIN_B22 -to seg_out[2][6]
+set_location_assignment PIN_A19 -to seg_out[2][7]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

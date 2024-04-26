@@ -1,5 +1,5 @@
 Flow report for Lab4
-Thu Apr 25 15:59:11 2024
+Thu Apr 25 17:52:12 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Flow Summary                                                                        ;
 +------------------------------------+------------------------------------------------+
-; Flow Status                        ; Successful - Thu Apr 25 15:59:11 2024          ;
+; Flow Status                        ; Successful - Thu Apr 25 17:52:12 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab4                                           ;
-; Top-level Entity Name              ; datapath                                       ;
+; Top-level Entity Name              ; top                                            ;
 ; Family                             ; MAX 10                                         ;
 ; Device                             ; 10M50DAF484C7G                                 ;
 ; Timing Models                      ; Final                                          ;
 ; Total logic elements               ; 44 / 49,760 ( < 1 % )                          ;
-;     Total combinational functions  ; 40 / 49,760 ( < 1 % )                          ;
-;     Dedicated logic registers      ; 16 / 49,760 ( < 1 % )                          ;
-; Total registers                    ; 16                                             ;
-; Total pins                         ; 39 / 360 ( 11 % )                              ;
+;     Total combinational functions  ; 39 / 49,760 ( < 1 % )                          ;
+;     Dedicated logic registers      ; 21 / 49,760 ( < 1 % )                          ;
+; Total registers                    ; 21                                             ;
+; Total pins                         ; 35 / 360 ( 10 % )                              ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0 / 1,677,312 ( 0 % )                          ;
 ; Embedded Multiplier 9-bit elements ; 0 / 288 ( 0 % )                                ;
@@ -67,7 +67,7 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/25/2024 15:58:44 ;
+; Start date & time ; 04/25/2024 17:51:44 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Lab4                ;
 +-------------------+---------------------+
@@ -78,7 +78,7 @@ https://fpgasoftware.intel.com/eula.
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 ; Assignment Name                      ; Value                                  ; Default Value ; Entity Name ; Section Id                        ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
-; COMPILER_SIGNATURE_ID                ; 52230099337.171408592401052            ; --            ; --          ; --                                ;
+; COMPILER_SIGNATURE_ID                ; 52230099337.171409270407804            ; --            ; --          ; --                                ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; mux4_2to1_tb                      ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; fsm_tb                            ;
 ; EDA_DESIGN_INSTANCE_NAME             ; NA                                     ; --            ; --          ; datapath_tb                       ;
@@ -89,7 +89,7 @@ https://fpgasoftware.intel.com/eula.
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_boundary_scan    ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_signal_integrity ;
 ; EDA_GENERATE_FUNCTIONAL_NETLIST      ; Off                                    ; --            ; --          ; eda_board_design_symbol           ;
-; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; datapath_tb                            ; --            ; --          ; eda_simulation                    ;
+; EDA_NATIVELINK_SIMULATION_TEST_BENCH ; fsm_tb                                 ; --            ; --          ; eda_simulation                    ;
 ; EDA_OUTPUT_DATA_FORMAT               ; Verilog Hdl                            ; --            ; --          ; eda_simulation                    ;
 ; EDA_SIMULATION_TOOL                  ; Questa Intel FPGA (Verilog)            ; <None>        ; --          ; --                                ;
 ; EDA_TEST_BENCH_ENABLE_STATUS         ; TEST_BENCH_MODE                        ; --            ; --          ; eda_simulation                    ;
@@ -115,13 +115,13 @@ https://fpgasoftware.intel.com/eula.
 ; MAX_CORE_JUNCTION_TEMP               ; 85                                     ; --            ; --          ; --                                ;
 ; MIN_CORE_JUNCTION_TEMP               ; 0                                      ; --            ; --          ; --                                ;
 ; NUM_PARALLEL_PROCESSORS              ; All                                    ; --            ; --          ; --                                ;
-; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
-; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
-; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; datapath    ; Top                               ;
+; PARTITION_COLOR                      ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
+; PARTITION_FITTER_PRESERVATION_LEVEL  ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
+; PARTITION_NETLIST_TYPE               ; -- (Not supported for targeted family) ; --            ; top         ; Top                               ;
 ; POWER_BOARD_THERMAL_MODEL            ; None (CONSERVATIVE)                    ; --            ; --          ; --                                ;
 ; POWER_PRESET_COOLING_SOLUTION        ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW  ; --            ; --          ; --                                ;
 ; PROJECT_OUTPUT_DIRECTORY             ; output_files                           ; --            ; --          ; --                                ;
-; TOP_LEVEL_ENTITY                     ; datapath                               ; Lab4          ; --          ; --                                ;
+; TOP_LEVEL_ENTITY                     ; top                                    ; Lab4          ; --          ; --                                ;
 +--------------------------------------+----------------------------------------+---------------+-------------+-----------------------------------+
 
 
@@ -131,11 +131,11 @@ https://fpgasoftware.intel.com/eula.
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4727 MB             ; 00:00:11                           ;
-; Fitter               ; 00:00:10     ; 1.0                     ; 5326 MB             ; 00:00:10                           ;
-; Assembler            ; 00:00:03     ; 1.0                     ; 4727 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4795 MB             ; 00:00:02                           ;
+; Fitter               ; 00:00:09     ; 1.0                     ; 5330 MB             ; 00:00:09                           ;
+; Assembler            ; 00:00:03     ; 1.0                     ; 4726 MB             ; 00:00:03                           ;
+; Timing Analyzer      ; 00:00:02     ; 1.0                     ; 4817 MB             ; 00:00:02                           ;
 ; EDA Netlist Writer   ; 00:00:00     ; 1.0                     ; 4633 MB             ; 00:00:00                           ;
-; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:25                           ;
+; Total                ; 00:00:22     ; --                      ; --                  ; 00:00:25                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

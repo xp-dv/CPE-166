@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Lab4
-Thu Apr 25 15:58:52 2024
+Thu Apr 25 17:51:53 2024
 Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
 
 
@@ -13,12 +13,19 @@ Quartus Prime Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Multiplexer Restructuring Statistics (Restructuring Performed)
- 10. Port Connectivity Checks: "mux4_4to1:mux3"
- 11. Post-Synthesis Netlist Statistics for Top Partition
- 12. Elapsed Time Per Partition
- 13. Analysis & Synthesis Messages
+  8. State Machine - |top|mpu:mpu_block|fsm:fsm_block|cs
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "hex_7seg_decoder_anode:seg2"
+ 14. Port Connectivity Checks: "hex_7seg_decoder_anode:seg1"
+ 15. Port Connectivity Checks: "hex_7seg_decoder_anode:seg0"
+ 16. Port Connectivity Checks: "mpu:mpu_block|datapath:datapath_block|mux4_4to1:mux3"
+ 17. Port Connectivity Checks: "mpu:mpu_block"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -45,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                        ;
 +------------------------------------+------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Apr 25 15:58:52 2024          ;
+; Analysis & Synthesis Status        ; Successful - Thu Apr 25 17:51:53 2024          ;
 ; Quartus Prime Version              ; 23.1std.0 Build 991 11/28/2023 SC Lite Edition ;
 ; Revision Name                      ; Lab4                                           ;
-; Top-level Entity Name              ; datapath                                       ;
+; Top-level Entity Name              ; top                                            ;
 ; Family                             ; MAX 10                                         ;
-; Total logic elements               ; 39                                             ;
-;     Total combinational functions  ; 39                                             ;
-;     Dedicated logic registers      ; 16                                             ;
-; Total registers                    ; 16                                             ;
-; Total pins                         ; 39                                             ;
+; Total logic elements               ; 49                                             ;
+;     Total combinational functions  ; 37                                             ;
+;     Dedicated logic registers      ; 21                                             ;
+; Total registers                    ; 21                                             ;
+; Total pins                         ; 35                                             ;
 ; Total virtual pins                 ; 0                                              ;
 ; Total memory bits                  ; 0                                              ;
 ; Embedded Multiplier 9-bit elements ; 0                                              ;
@@ -70,7 +77,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; 10M50DAF484C7G     ;                    ;
-; Top-level entity name                                            ; datapath           ; Lab4               ;
+; Top-level entity name                                            ; top                ; Lab4               ;
 ; Family name                                                      ; MAX 10             ; Cyclone V          ;
 ; Maximum processors allowed for parallel compilation              ; All                ;                    ;
 ; Use smart compilation                                            ; Off                ; Off                ;
@@ -168,17 +175,21 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                     ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                 ; Library ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
-; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv ;         ;
-; alu.v                            ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v       ;         ;
-; dff4_ce.v                        ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v   ;         ;
-; mux4_4to1.v                      ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v ;         ;
-; mux4_2to1.v                      ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v ;         ;
-+----------------------------------+-----------------+------------------------------+--------------------------------------------------------------+---------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                   ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
+; top.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv                    ;         ;
+; hex_7seg_decoder_anode.sv        ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/hex_7seg_decoder_anode.sv ;         ;
+; mpu.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mpu.sv                    ;         ;
+; fsm.sv                           ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/fsm.sv                    ;         ;
+; datapath.sv                      ; yes             ; User SystemVerilog HDL File  ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv               ;         ;
+; alu.v                            ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/alu.v                     ;         ;
+; dff4_ce.v                        ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/dff4_ce.v                 ;         ;
+; mux4_4to1.v                      ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_4to1.v               ;         ;
+; mux4_2to1.v                      ; yes             ; User Verilog HDL File        ; C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v               ;         ;
++----------------------------------+-----------------+------------------------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------------------+
@@ -186,50 +197,90 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-----------+
 ; Resource                                    ; Usage     ;
 +---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 39        ;
+; Estimated Total logic elements              ; 49        ;
 ;                                             ;           ;
-; Total combinational functions               ; 39        ;
+; Total combinational functions               ; 37        ;
 ; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 17        ;
-;     -- 3 input functions                    ; 19        ;
-;     -- <=2 input functions                  ; 3         ;
+;     -- 4 input functions                    ; 21        ;
+;     -- 3 input functions                    ; 7         ;
+;     -- <=2 input functions                  ; 9         ;
 ;                                             ;           ;
 ; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 35        ;
+;     -- normal mode                          ; 33        ;
 ;     -- arithmetic mode                      ; 4         ;
 ;                                             ;           ;
-; Total registers                             ; 16        ;
-;     -- Dedicated logic registers            ; 16        ;
+; Total registers                             ; 21        ;
+;     -- Dedicated logic registers            ; 21        ;
 ;     -- I/O registers                        ; 0         ;
 ;                                             ;           ;
-; I/O pins                                    ; 39        ;
+; I/O pins                                    ; 35        ;
 ;                                             ;           ;
 ; Embedded Multiplier 9-bit elements          ; 0         ;
 ;                                             ;           ;
 ; Maximum fan-out node                        ; clk~input ;
-; Maximum fan-out                             ; 16        ;
-; Total fan-out                               ; 254       ;
-; Average fan-out                             ; 1.91      ;
+; Maximum fan-out                             ; 21        ;
+; Total fan-out                               ; 264       ;
+; Average fan-out                             ; 2.06      ;
 +---------------------------------------------+-----------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name      ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
-; |datapath                  ; 39 (0)              ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 39   ; 0            ; 0          ; |datapath                ; datapath    ; work         ;
-;    |alu:alu|               ; 13 (13)             ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|alu:alu        ; alu         ; work         ;
-;    |dff4_ce:dff0|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|dff4_ce:dff0   ; dff4_ce     ; work         ;
-;    |dff4_ce:dff1|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|dff4_ce:dff1   ; dff4_ce     ; work         ;
-;    |dff4_ce:dff2|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|dff4_ce:dff2   ; dff4_ce     ; work         ;
-;    |dff4_ce:dff3|          ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|dff4_ce:dff3   ; dff4_ce     ; work         ;
-;    |mux4_2to1:mux0|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux4_2to1:mux0 ; mux4_2to1   ; work         ;
-;    |mux4_2to1:mux1|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux4_2to1:mux1 ; mux4_2to1   ; work         ;
-;    |mux4_2to1:mux2|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux4_2to1:mux2 ; mux4_2to1   ; work         ;
-;    |mux4_4to1:mux3|        ; 9 (9)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |datapath|mux4_4to1:mux3 ; mux4_4to1   ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+--------------------------+-------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                       ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+------------------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                       ; Entity Name            ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+------------------------+--------------+
+; |top                             ; 37 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 35   ; 0            ; 0          ; |top                                                      ; top                    ; work         ;
+;    |hex_7seg_decoder_anode:seg0| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|hex_7seg_decoder_anode:seg0                          ; hex_7seg_decoder_anode ; work         ;
+;    |hex_7seg_decoder_anode:seg1| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|hex_7seg_decoder_anode:seg1                          ; hex_7seg_decoder_anode ; work         ;
+;    |hex_7seg_decoder_anode:seg2| ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|hex_7seg_decoder_anode:seg2                          ; hex_7seg_decoder_anode ; work         ;
+;    |mpu:mpu_block|               ; 16 (0)              ; 21 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block                                        ; mpu                    ; work         ;
+;       |datapath:datapath_block|  ; 13 (0)              ; 16 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block                ; datapath               ; work         ;
+;          |alu:alu|               ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|alu:alu        ; alu                    ; work         ;
+;          |dff4_ce:dff0|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|dff4_ce:dff0   ; dff4_ce                ; work         ;
+;          |dff4_ce:dff1|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|dff4_ce:dff1   ; dff4_ce                ; work         ;
+;          |dff4_ce:dff2|          ; 0 (0)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|dff4_ce:dff2   ; dff4_ce                ; work         ;
+;          |dff4_ce:dff3|          ; 5 (5)               ; 4 (4)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|dff4_ce:dff3   ; dff4_ce                ; work         ;
+;          |mux4_2to1:mux2|        ; 4 (4)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|datapath:datapath_block|mux4_2to1:mux2 ; mux4_2to1              ; work         ;
+;       |fsm:fsm_block|            ; 3 (3)               ; 5 (5)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top|mpu:mpu_block|fsm:fsm_block                          ; fsm                    ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+-----------------------------------------------------------+------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
+Encoding Type:  One-Hot
++---------------------------------------------------------------------------------------------------+
+; State Machine - |top|mpu:mpu_block|fsm:fsm_block|cs                                               ;
++----------------+----------------+--------------+----------------+------------+---------+----------+
+; Name           ; cs.OP_MOV_R2_A ; cs.OP_SBC_R1 ; cs.OP_MOV_A_R0 ; cs.OP_MOVM ; cs.IDLE ; cs.CLEAR ;
++----------------+----------------+--------------+----------------+------------+---------+----------+
+; cs.CLEAR       ; 0              ; 0            ; 0              ; 0          ; 0       ; 0        ;
+; cs.IDLE        ; 0              ; 0            ; 0              ; 0          ; 1       ; 1        ;
+; cs.OP_MOVM     ; 0              ; 0            ; 0              ; 1          ; 0       ; 1        ;
+; cs.OP_MOV_A_R0 ; 0              ; 0            ; 1              ; 0          ; 0       ; 1        ;
+; cs.OP_SBC_R1   ; 0              ; 1            ; 0              ; 0          ; 0       ; 1        ;
+; cs.OP_MOV_R2_A ; 1              ; 0            ; 0              ; 0          ; 0       ; 1        ;
++----------------+----------------+--------------+----------------+------------+---------+----------+
+
+
++------------------------------------------------------------+
+; Registers Removed During Synthesis                         ;
++---------------------------------------+--------------------+
+; Register name                         ; Reason for Removal ;
++---------------------------------------+--------------------+
+; mpu:mpu_block|fsm:fsm_block|cs~4      ; Lost fanout        ;
+; mpu:mpu_block|fsm:fsm_block|cs~5      ; Lost fanout        ;
+; mpu:mpu_block|fsm:fsm_block|cs~6      ; Lost fanout        ;
+; mpu:mpu_block|fsm:fsm_block|cs.IDLE   ; Lost fanout        ;
+; Total Number of Removed Registers = 4 ;                    ;
++---------------------------------------+--------------------+
+
+
++------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                    ;
++----------------------------------+--------------------+----------------------------------------+
+; Register name                    ; Reason for Removal ; Registers Removed due to This Register ;
++----------------------------------+--------------------+----------------------------------------+
+; mpu:mpu_block|fsm:fsm_block|cs~4 ; Lost Fanouts       ; mpu:mpu_block|fsm:fsm_block|cs.IDLE    ;
++----------------------------------+--------------------+----------------------------------------+
 
 
 +------------------------------------------------------+
@@ -237,33 +288,68 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 16    ;
+; Total registers                              ; 21    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 4     ;
-; Number of registers using Asynchronous Clear ; 16    ;
+; Number of registers using Asynchronous Clear ; 21    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 16    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 8:1                ; 4 bits    ; 20 LEs        ; 16 LEs               ; 4 LEs                  ; Yes        ; |datapath|dff4_ce:dff3|q[0]   ;
-; 4:1                ; 4 bits    ; 8 LEs         ; 8 LEs                ; 0 LEs                  ; No         ; |datapath|mux4_4to1:mux3|y[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++----------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                             ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                                   ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
+; 4:1                ; 4 bits    ; 8 LEs         ; 4 LEs                ; 4 LEs                  ; Yes        ; |top|mpu:mpu_block|datapath:datapath_block|dff4_ce:dff3|q[3] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+--------------------------------------------------------------+
 
 
-+--------------------------------------------+
-; Port Connectivity Checks: "mux4_4to1:mux3" ;
-+------+-------+----------+------------------+
-; Port ; Type  ; Severity ; Details          ;
-+------+-------+----------+------------------+
-; d3   ; Input ; Info     ; Stuck at GND     ;
-+------+-------+----------+------------------+
++---------------------------------------------------------+
+; Port Connectivity Checks: "hex_7seg_decoder_anode:seg2" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; dp   ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "hex_7seg_decoder_anode:seg1" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; dp   ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++---------------------------------------------------------+
+; Port Connectivity Checks: "hex_7seg_decoder_anode:seg0" ;
++------+-------+----------+-------------------------------+
+; Port ; Type  ; Severity ; Details                       ;
++------+-------+----------+-------------------------------+
+; dp   ; Input ; Info     ; Stuck at GND                  ;
++------+-------+----------+-------------------------------+
+
+
++----------------------------------------------------------------------------------+
+; Port Connectivity Checks: "mpu:mpu_block|datapath:datapath_block|mux4_4to1:mux3" ;
++------+-------+----------+--------------------------------------------------------+
+; Port ; Type  ; Severity ; Details                                                ;
++------+-------+----------+--------------------------------------------------------+
+; d3   ; Input ; Info     ; Stuck at GND                                           ;
++------+-------+----------+--------------------------------------------------------+
+
+
++-------------------------------------------+
+; Port Connectivity Checks: "mpu:mpu_block" ;
++--------+-------+----------+---------------+
+; Port   ; Type  ; Severity ; Details       ;
++--------+-------+----------+---------------+
+; m_i[2] ; Input ; Info     ; Stuck at GND  ;
++--------+-------+----------+---------------+
 
 
 +-----------------------------------------------------+
@@ -271,21 +357,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 39                          ;
-; cycloneiii_ff         ; 16                          ;
+; boundary_port         ; 35                          ;
+; cycloneiii_ff         ; 21                          ;
+;     CLR               ; 5                           ;
 ;     ENA CLR           ; 12                          ;
 ;     ENA CLR SLD       ; 4                           ;
-; cycloneiii_lcell_comb ; 39                          ;
+; cycloneiii_lcell_comb ; 41                          ;
 ;     arith             ; 4                           ;
 ;         2 data inputs ; 1                           ;
 ;         3 data inputs ; 3                           ;
-;     normal            ; 35                          ;
-;         2 data inputs ; 2                           ;
-;         3 data inputs ; 16                          ;
-;         4 data inputs ; 17                          ;
+;     normal            ; 37                          ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 7                           ;
+;         3 data inputs ; 4                           ;
+;         4 data inputs ; 21                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.30                        ;
-; Average LUT depth     ; 2.47                        ;
+; Max LUT depth         ; 2.30                        ;
+; Average LUT depth     ; 1.32                        ;
 +-----------------------+-----------------------------+
 
 
@@ -304,9 +393,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 23.1std.0 Build 991 11/28/2023 SC Lite Edition
-    Info: Processing started: Thu Apr 25 15:58:44 2024
+    Info: Processing started: Thu Apr 25 17:51:44 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Lab4 -c Lab4
 Info (20030): Parallel compilation is enabled and will use 2 of the 2 processors detected
+Info (12021): Found 1 design units, including 1 entities, in source file top.sv
+    Info (12023): Found entity 1: top File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file hex_7seg_decoder_anode.sv
+    Info (12023): Found entity 1: hex_7seg_decoder_anode File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/hex_7seg_decoder_anode.sv Line: 2
+Info (12021): Found 1 design units, including 1 entities, in source file mpu.sv
+    Info (12023): Found entity 1: mpu File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mpu.sv Line: 15
 Info (12021): Found 1 design units, including 1 entities, in source file fsm_tb.sv
     Info (12023): Found entity 1: fsm_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/fsm_tb.sv Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file fsm.sv
@@ -331,22 +426,31 @@ Info (12021): Found 1 design units, including 1 entities, in source file mux4_2t
     Info (12023): Found entity 1: mux4_2to1_tb File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1_tb.v Line: 2
 Info (12021): Found 1 design units, including 1 entities, in source file mux4_2to1.v
     Info (12023): Found entity 1: mux4_2to1 File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mux4_2to1.v Line: 2
-Info (12127): Elaborating entity "datapath" for the top level hierarchy
-Info (12128): Elaborating entity "mux4_2to1" for hierarchy "mux4_2to1:mux0" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 15
-Info (12128): Elaborating entity "dff4_ce" for hierarchy "dff4_ce:dff0" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 19
-Info (12128): Elaborating entity "mux4_4to1" for hierarchy "mux4_4to1:mux3" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 23
-Info (12128): Elaborating entity "alu" for hierarchy "alu:alu" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 25
+Info (12127): Elaborating entity "top" for the top level hierarchy
+Info (12128): Elaborating entity "mpu" for hierarchy "mpu:mpu_block" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 9
+Info (12128): Elaborating entity "datapath" for hierarchy "mpu:mpu_block|datapath:datapath_block" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mpu.sv Line: 26
+Info (12128): Elaborating entity "mux4_2to1" for hierarchy "mpu:mpu_block|datapath:datapath_block|mux4_2to1:mux0" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 14
+Info (12128): Elaborating entity "dff4_ce" for hierarchy "mpu:mpu_block|datapath:datapath_block|dff4_ce:dff0" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 18
+Info (12128): Elaborating entity "mux4_4to1" for hierarchy "mpu:mpu_block|datapath:datapath_block|mux4_4to1:mux3" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 22
+Info (12128): Elaborating entity "alu" for hierarchy "mpu:mpu_block|datapath:datapath_block|alu:alu" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/datapath.sv Line: 24
+Info (12128): Elaborating entity "fsm" for hierarchy "mpu:mpu_block|fsm:fsm_block" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/mpu.sv Line: 27
+Info (12128): Elaborating entity "hex_7seg_decoder_anode" for hierarchy "hex_7seg_decoder_anode:seg0" File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 10
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "seg_out[0][7]" is stuck at VCC File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 6
+    Warning (13410): Pin "seg_out[1][7]" is stuck at VCC File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 6
+    Warning (13410): Pin "seg_out[2][7]" is stuck at VCC File: C:/Users/XP/Documents/CPE 166/FPGA Projects/Lab4/top.sv Line: 6
 Info (286030): Timing-Driven Synthesis is running
+Info (17049): 4 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 78 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 27 input pins
-    Info (21059): Implemented 12 output pins
-    Info (21061): Implemented 39 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 0 warnings
+Info (21057): Implemented 84 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 11 input pins
+    Info (21059): Implemented 24 output pins
+    Info (21061): Implemented 49 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 4 warnings
     Info: Peak virtual memory: 4731 megabytes
-    Info: Processing ended: Thu Apr 25 15:58:52 2024
-    Info: Elapsed time: 00:00:08
+    Info: Processing ended: Thu Apr 25 17:51:53 2024
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:11
 
 
