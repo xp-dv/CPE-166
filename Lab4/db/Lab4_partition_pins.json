@@ -144,6 +144,34 @@
 					"strict" : false
 				},
 				{
+					"name" : "seg_o[5][0]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][1]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][2]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][3]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][4]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][5]",
+					"strict" : false
+				},
+				{
+					"name" : "seg_o[5][6]",
+					"strict" : false
+				},
+				{
 					"name" : "m_i[0][0]",
 					"strict" : false
 				},
@@ -176,11 +204,27 @@
 					"strict" : false
 				},
 				{
+					"name" : "m_i[2][0]",
+					"strict" : false
+				},
+				{
+					"name" : "m_i[2][1]",
+					"strict" : false
+				},
+				{
+					"name" : "m_i[2][2]",
+					"strict" : false
+				},
+				{
+					"name" : "m_i[2][3]",
+					"strict" : false
+				},
+				{
 					"name" : "clk",
 					"strict" : false
 				},
 				{
-					"name" : "reset",
+					"name" : "reset_n",
 					"strict" : false
 				},
 				{

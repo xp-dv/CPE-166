@@ -1,4 +1,4 @@
-/* 4-bit Simplified Microprocessor */
+/* 4-bit Simplified Microprocessor Unit */
 
 /* Assembly Terms */
 // Input | M[0], M[1], M[2], or Cin
