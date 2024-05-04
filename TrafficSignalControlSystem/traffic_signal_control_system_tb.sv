@@ -1,6 +1,6 @@
+/* Traffic Signal Control System Test Bench */
 `timescale 1ms/1ms
 
-/* Traffic Signal Control System Test Bench */
 module traffic_signal_control_system_tb();
 
 import traffic_signal_colors_pkg::*;
