@@ -1,0 +1,121 @@
+m255
+K4
+z2
+Z0 !s12c _opt
+Z1 !s99 nomlopt
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+R0
+R1
+!s11f vlog 2023.3 2023.07, Jul 17 2023
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z2 dC:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/simulation/questa
+T_opt
+!s110 1714858841
+V[L6bU8:fdKnZjc[N;2Klo0
+04 32 4 work traffic_signal_control_system_tb fast 0
+=11-000c29281189-6636ab58-313-acc
+R1
+!s12b OEM100
+!s124 OEM10U2 
+o-quiet -auto_acc_if_foreign -work work -L altera_ver -L lpm_ver -L sgate_ver -L altera_mf_ver -L altera_lnsim_ver -L fiftyfivenm_ver -L rtl_work -L work +acc
+Z3 tCvgOpt 0
+n@_opt
+OL;O;2023.3;77
+Xtraffic_signal_colors_pkg
+2C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_colors_pkg.sv
+Z4 DXx6 sv_std 3 std 0 22 9oUSJO;AeEaW`l:M@^WG92
+!s110 1714824633
+!i10b 1
+!s100 M9DgPRbY5iW=UOIBMO7[e3
+I>RZUS_]`<6A0g>kfHFRLd1
+S1
+R2
+w1714821045
+8C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_colors_pkg.sv
+FC:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_colors_pkg.sv
+!i122 0
+L0 2 0
+V>RZUS_]`<6A0g>kfHFRLd1
+Z5 OL;L;2023.3;77
+r1
+!s85 0
+31
+!s108 1714824633.000000
+!s107 C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_colors_pkg.sv|
+!s90 -reportprogress|300|-sv|-work|work|+incdir+C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem|C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_colors_pkg.sv|
+!i113 0
+o-sv -work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+!s92 -sv -work work {+incdir+C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem} -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtraffic_signal_control_system
+2C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system.sv
+R4
+Z6 DXx4 work 25 traffic_signal_colors_pkg 0 22 >RZUS_]`<6A0g>kfHFRLd1
+!s110 1714858249
+!i10b 1
+!s100 j0R<];mbPFXVBi=jH`TZX3
+Ika888Fldj<<XYORGbm6Ha0
+S1
+R2
+w1714857536
+8C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system.sv
+FC:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system.sv
+!i122 10
+L0 2 185
+Z7 VDg1SIo80bB@j0V0VzS_@n1
+R5
+r1
+!s85 0
+31
+!s108 1714858249.000000
+!s107 C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system.sv|
+!i113 0
+Z8 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+R3
+vtraffic_signal_control_system_tb
+2C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system_tb.sv
+R4
+R6
+!s110 1714858837
+!i10b 1
+!s100 94JO_VJA;MZnd[2_meKJJ2
+I0YdF7WHaK_b`8]PaZ5IZR0
+S1
+R2
+w1714858832
+8C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system_tb.sv
+FC:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system_tb.sv
+!i122 14
+L0 4 50
+R7
+R5
+r1
+!s85 0
+31
+!s108 1714858837.000000
+!s107 C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system_tb.sv|
+!s90 -reportprogress|300|-work|work|C:/Users/XP/Documents/CPE 166/TrafficSignalControlSystem/traffic_signal_control_system_tb.sv|
+!i113 0
+R8
+R3

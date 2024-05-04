@@ -1,0 +1,16 @@
+
+State Machine - |traffic_signal_control_system|cs
+Name cs.EB_ALL_Y cs.EB_ALL_G cs.EB_G_WB_Y cs.EW_THROUGH_G cs.WB_TURN_Y cs.WB_ALL_G cs.NB_ALL_Y cs.NB_ALL_G cs.NB_G_SB_Y cs.NS_THROUGH_G cs.SB_TURN_Y cs.SB_ALL_G cs.FLASHING_RED 
+cs.FLASHING_RED 0 0 0 0 0 0 0 0 0 0 0 0 0 
+cs.SB_ALL_G 0 0 0 0 0 0 0 0 0 0 0 1 1 
+cs.SB_TURN_Y 0 0 0 0 0 0 0 0 0 0 1 0 1 
+cs.NS_THROUGH_G 0 0 0 0 0 0 0 0 0 1 0 0 1 
+cs.NB_G_SB_Y 0 0 0 0 0 0 0 0 1 0 0 0 1 
+cs.NB_ALL_G 0 0 0 0 0 0 0 1 0 0 0 0 1 
+cs.NB_ALL_Y 0 0 0 0 0 0 1 0 0 0 0 0 1 
+cs.WB_ALL_G 0 0 0 0 0 1 0 0 0 0 0 0 1 
+cs.WB_TURN_Y 0 0 0 0 1 0 0 0 0 0 0 0 1 
+cs.EW_THROUGH_G 0 0 0 1 0 0 0 0 0 0 0 0 1 
+cs.EB_G_WB_Y 0 0 1 0 0 0 0 0 0 0 0 0 1 
+cs.EB_ALL_G 0 1 0 0 0 0 0 0 0 0 0 0 1 
+cs.EB_ALL_Y 1 0 0 0 0 0 0 0 0 0 0 0 1 

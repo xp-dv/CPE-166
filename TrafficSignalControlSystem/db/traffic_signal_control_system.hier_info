@@ -1,0 +1,41 @@
+|traffic_signal_control_system
+clk => timer[0].CLK
+clk => timer[1].CLK
+clk => timer[2].CLK
+clk => timer[3].CLK
+clk => timer[4].CLK
+clk => timer[5].CLK
+clk => timer[6].CLK
+clk => timer[7].CLK
+clk => cs~1.DATAIN
+reset => timer[0].ACLR
+reset => timer[1].ACLR
+reset => timer[2].PRESET
+reset => timer[3].ACLR
+reset => timer[4].PRESET
+reset => timer[5].ACLR
+reset => timer[6].ACLR
+reset => timer[7].ACLR
+reset => cs~3.DATAIN
+signal_sb[0] <= signal_sb.DB_MAX_OUTPUT_PORT_TYPE
+signal_sb[1] <= WideOr0.DB_MAX_OUTPUT_PORT_TYPE
+signal_sb_turn[0] <= signal_sb_turn.DB_MAX_OUTPUT_PORT_TYPE
+signal_sb_turn[1] <= signal_sb_turn.DB_MAX_OUTPUT_PORT_TYPE
+signal_nb[0] <= signal_nb.DB_MAX_OUTPUT_PORT_TYPE
+signal_nb[1] <= WideOr1.DB_MAX_OUTPUT_PORT_TYPE
+signal_nb_turn[0] <= signal_nb.DB_MAX_OUTPUT_PORT_TYPE
+signal_nb_turn[1] <= signal_nb_turn.DB_MAX_OUTPUT_PORT_TYPE
+signal_wb[0] <= signal_wb.DB_MAX_OUTPUT_PORT_TYPE
+signal_wb[1] <= WideOr2.DB_MAX_OUTPUT_PORT_TYPE
+signal_wb_turn[0] <= signal_wb_turn.DB_MAX_OUTPUT_PORT_TYPE
+signal_wb_turn[1] <= signal_wb_turn.DB_MAX_OUTPUT_PORT_TYPE
+signal_eb[0] <= signal_eb.DB_MAX_OUTPUT_PORT_TYPE
+signal_eb[1] <= WideOr3.DB_MAX_OUTPUT_PORT_TYPE
+signal_eb_turn[0] <= signal_eb.DB_MAX_OUTPUT_PORT_TYPE
+signal_eb_turn[1] <= signal_eb_turn.DB_MAX_OUTPUT_PORT_TYPE
+ped_signal_ns[0] <= ped_signal_ew[0].DB_MAX_OUTPUT_PORT_TYPE
+ped_signal_ns[1] <= ped_signal_ns[1].DB_MAX_OUTPUT_PORT_TYPE
+ped_signal_ew[0] <= ped_signal_ew[0].DB_MAX_OUTPUT_PORT_TYPE
+ped_signal_ew[1] <= ped_signal_ew[1].DB_MAX_OUTPUT_PORT_TYPE
+
+

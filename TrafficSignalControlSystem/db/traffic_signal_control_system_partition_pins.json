@@ -1,0 +1,97 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "signal_sb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_sb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_sb_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_sb_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_nb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_nb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_nb_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_nb_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_wb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_wb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_wb_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_wb_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_eb[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_eb[1]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_eb_turn[0]",
+					"strict" : false
+				},
+				{
+					"name" : "signal_eb_turn[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ped_signal_ns[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ped_signal_ns[1]",
+					"strict" : false
+				},
+				{
+					"name" : "ped_signal_ew[0]",
+					"strict" : false
+				},
+				{
+					"name" : "ped_signal_ew[1]",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				},
+				{
+					"name" : "reset",
+					"strict" : false
+				}
+			]
+		}
+	]
+}

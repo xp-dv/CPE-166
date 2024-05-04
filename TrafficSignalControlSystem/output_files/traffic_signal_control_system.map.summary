@@ -1,0 +1,16 @@
+Analysis & Synthesis Status : Successful - Sat May  4 15:14:58 2024
+Quartus Prime Version : 23.1std.0 Build 991 11/28/2023 SC Lite Edition
+Revision Name : traffic_signal_control_system
+Top-level Entity Name : traffic_signal_control_system
+Family : MAX 10
+Total logic elements : 45
+    Total combinational functions : 33
+    Dedicated logic registers : 21
+Total registers : 21
+Total pins : 22
+Total virtual pins : 0
+Total memory bits : 0
+Embedded Multiplier 9-bit elements : 0
+Total PLLs : 0
+UFM blocks : 0
+ADC blocks : 0
