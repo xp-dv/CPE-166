@@ -1,4 +1,4 @@
-/* 3-bit Arithmetic Logic Unit */
+/* 4-bit 8-instruction Arithmetic Logic Unit */
 module alu(
   input [2:0] s, // Operation Select (Opcode). 3-bit = 8 possible operations
   input [3:0] a, b,

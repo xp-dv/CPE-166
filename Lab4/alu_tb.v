@@ -1,4 +1,4 @@
-/* 3-bit Arithmetic Logic Unit Test Bench */
+/* 4-bit 8-instruction Arithmetic Logic Unit Test Bench */
 module alu_tb();
 
 reg [2:0] s;
