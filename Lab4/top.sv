@@ -1,10 +1,10 @@
 /* 4-bit Simplified Microprocessor Top-Level Module */
 module top(
   input logic clk, reset_n, cin_i, // Internal 50 MHz Clock, Reset Btn (3.3 V Schmitt Trigger), Carry In Switch
-  input logic [3:0] m_i [2:0], // 3×4-bit Input Data
-  output logic [7:0] seg_o [5:0] // 5×8-bit 7 Segment Output
+  input logic [3:0] m_i [2:0], // 3x4-bit Input Data
+  output logic [7:0] seg_o [5:0] // 5x8-bit 7 Segment Output
 );
-logic [3:0] r_q [2:0]; // 3×4 Output Memory
+logic [3:0] r_q [2:0]; // 3x4 Output Memory
 
 mpu mpu (
   .clk(clk),

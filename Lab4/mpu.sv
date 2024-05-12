@@ -14,8 +14,8 @@
 
 module mpu(
   input logic clk, reset, cin_i, // Clock, Reset, Carry In
-  input logic [3:0] m_i [2:0], // 3×4 Input Data
-  output logic [3:0] r_q [2:0] // 3×4 Output Memory
+  input logic [3:0] m_i [2:0], // 3x4 Input Data
+  output logic [3:0] r_q [2:0] // 3x4 Output Memory
 );
 logic clr_io; // Clear
 logic [3:0] ce_io; // Clock Enable

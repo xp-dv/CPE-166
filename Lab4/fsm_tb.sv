@@ -1,4 +1,4 @@
-/* Microprocessor FSM Test Bench */
+/* Microprocessor Control Path FSM Test Bench */
 module fsm_tb();
 
 logic clk, reset = 0;

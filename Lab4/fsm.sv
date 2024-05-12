@@ -1,4 +1,4 @@
-/* Microprocessor FSM */
+/* Microprocessor Control Path FSM */
 
 /* Assembly Terms */
 // Input | M[0], M[1], M[2], or Cin
@@ -16,8 +16,8 @@ module fsm(
   input logic clk, reset, // Clock, Reset
   output logic clr_o, // Clear
   output logic [3:0] ce_o, // Clock Enable
-  output logic [2:0] w_o, // 2to1 Mux Selector
-  output logic [1:0] sel_o, // 4to1 Mux Selector
+  output logic [2:0] w_o, // 2 to 1 Mux Selector
+  output logic [1:0] sel_o, // 4 to 1 Mux Selector
   output logic [2:0] s_o // ALU Operation Select (Opcode)
 );
 
